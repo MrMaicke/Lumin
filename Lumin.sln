@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lumin", "Lumin.csproj", "{BCED02F9-3409-7C47-09A6-ACD22919B81C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCED02F9-3409-7C47-09A6-ACD22919B81C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCED02F9-3409-7C47-09A6-ACD22919B81C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCED02F9-3409-7C47-09A6-ACD22919B81C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCED02F9-3409-7C47-09A6-ACD22919B81C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09596240-363A-4DAF-AE16-71B04F95DAD6}
+	EndGlobalSection
+EndGlobal
