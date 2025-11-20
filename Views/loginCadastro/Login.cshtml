@@ -5,15 +5,6 @@
 
     @* Formulário de cadastro de equipes *@
     <form method="POST" asp-action="CadastrarUsuario" asp-controller="Usuario">
-        <div class="form-control">
-            <label for="nome">Nome</label>
-            <input type="text" name="Nome">
-        </div>
-
-        <div class="form-control">
-            <label for="email">Nome de usuario</label>
-            <input type="Email" name="User">
-        </div>
 
         <div class="form-control">
             <label for="email">Email</label>
@@ -24,8 +15,6 @@
             <label for="senha">Senha</label>
             <input type="Password" name="senha">
         </div>
-
-
 
         @foreach (Usuario usuario in ViewBag.ListaUsuario)
         {
@@ -41,9 +30,8 @@
 
 <table class="table table-striped">
     <thead>
-        <th>Id</th>
-        <th>Nome</th>
         <th>Email</th>
+        <th>Senha</th>
 
     </thead>
 
@@ -51,11 +39,8 @@
         @foreach (Usuario usuario in ViewBag.ListaUsuarios)
         {
             <tr>
-                <td>@usuario.Id</td>
                 <td>@usuario.Nome</td>
-                <td>@usuario.Email</td>
-
-
+                <td>@usuario.Senha</td>
 
                 <td>
                     @*<a class="btn btn-primary" href="/Jogador/Atualizar/@jogador.Id">Atualizar</a>*@
