@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 [Route("[controller]")]
+{
     public class cadastrarController : Controller
     {
         // Criar uma referência (instância) sobre a comunicação do meu banco de dados
