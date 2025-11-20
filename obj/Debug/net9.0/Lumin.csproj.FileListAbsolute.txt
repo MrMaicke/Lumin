@@ -218,3 +218,15 @@ C:\Users\marcelo.soliveira38\OneDrive - SENAC - SP\Logica de Programação\Lumin
 C:\Users\marcelo.soliveira38\OneDrive - SENAC - SP\Logica de Programação\Lumin\obj\Debug\net9.0\Lumin.pdb
 C:\Users\marcelo.soliveira38\OneDrive - SENAC - SP\Logica de Programação\Lumin\obj\Debug\net9.0\Lumin.genruntimeconfig.cache
 C:\Users\marcelo.soliveira38\OneDrive - SENAC - SP\Logica de Programação\Lumin\obj\Debug\net9.0\ref\Lumin.dll
+T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\Lumin.csproj.AssemblyReference.cache
+T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\Lumin.GeneratedMSBuildEditorConfig.editorconfig
+T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\Lumin.AssemblyInfoInputs.cache
+T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\Lumin.AssemblyInfo.cs
+T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\Lumin.csproj.CoreCompileInputs.cache
+T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\Lumin.MvcApplicationPartsAssemblyInfo.cache
+T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\Lumin.RazorAssemblyInfo.cache
+T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\Lumin.RazorAssemblyInfo.cs
+T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\Lumin.sourcelink.json
+T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\Lumin.dll
+T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\refint\Lumin.dll
+T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\Lumin.pdb

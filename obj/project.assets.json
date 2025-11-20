@@ -4714,11 +4714,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "T:\\Publica\\transformece\\nycolasS\\lumin\\Lumin\\Lumin.csproj",
+      "projectUniqueName": "T:\\Publica\\transformece\\nycolasS\\Lumin\\Lumin.csproj",
       "projectName": "Lumin",
-      "projectPath": "T:\\Publica\\transformece\\nycolasS\\lumin\\Lumin\\Lumin.csproj",
+      "projectPath": "T:\\Publica\\transformece\\nycolasS\\Lumin\\Lumin.csproj",
       "packagesPath": "C:\\Users\\nycolas.sasantos\\.nuget\\packages\\",
-      "outputPath": "T:\\Publica\\transformece\\nycolasS\\lumin\\Lumin\\obj\\",
+      "outputPath": "T:\\Publica\\transformece\\nycolasS\\Lumin\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

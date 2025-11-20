@@ -17,49 +17,49 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Lumin
 build_property.RootNamespace = Lumin
-build_property.ProjectDir = C:\Users\marcelo.soliveira38\OneDrive - SENAC - SP\Logica de Programação\Lumin\
+build_property.ProjectDir = T:\Publica\transformece\nycolasS\Lumin\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\marcelo.soliveira38\OneDrive - SENAC - SP\Logica de Programação\Lumin
+build_property.MSBuildProjectDirectory = T:\Publica\transformece\nycolasS\Lumin
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/marcelo.soliveira38/OneDrive - SENAC - SP/Logica de Programação/Lumin/Views/Home/Index.cshtml]
+[T:/Publica/transformece/nycolasS/Lumin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marcelo.soliveira38/OneDrive - SENAC - SP/Logica de Programação/Lumin/Views/Home/Privacy.cshtml]
+[T:/Publica/transformece/nycolasS/Lumin/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marcelo.soliveira38/OneDrive - SENAC - SP/Logica de Programação/Lumin/Views/loginCadastro/cadastrar.cshtml]
+[T:/Publica/transformece/nycolasS/Lumin/Views/loginCadastro/cadastrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbG9naW5DYWRhc3Ryb1xjYWRhc3RyYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marcelo.soliveira38/OneDrive - SENAC - SP/Logica de Programação/Lumin/Views/loginCadastro/Login.cshtml]
+[T:/Publica/transformece/nycolasS/Lumin/Views/loginCadastro/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbG9naW5DYWRhc3Ryb1xMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marcelo.soliveira38/OneDrive - SENAC - SP/Logica de Programação/Lumin/Views/Shared/Error.cshtml]
+[T:/Publica/transformece/nycolasS/Lumin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marcelo.soliveira38/OneDrive - SENAC - SP/Logica de Programação/Lumin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[T:/Publica/transformece/nycolasS/Lumin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marcelo.soliveira38/OneDrive - SENAC - SP/Logica de Programação/Lumin/Views/_ViewImports.cshtml]
+[T:/Publica/transformece/nycolasS/Lumin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marcelo.soliveira38/OneDrive - SENAC - SP/Logica de Programação/Lumin/Views/_ViewStart.cshtml]
+[T:/Publica/transformece/nycolasS/Lumin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marcelo.soliveira38/OneDrive - SENAC - SP/Logica de Programação/Lumin/Views/Shared/_Layout.cshtml]
+[T:/Publica/transformece/nycolasS/Lumin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-c9m12vmy65
