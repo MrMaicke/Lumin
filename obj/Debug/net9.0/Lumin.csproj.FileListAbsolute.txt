@@ -218,3 +218,4 @@ C:\Users\marcelo.soliveira38\OneDrive - SENAC - SP\Logica de Programação\Lumin
 C:\Users\marcelo.soliveira38\OneDrive - SENAC - SP\Logica de Programação\Lumin\obj\Debug\net9.0\Lumin.pdb
 C:\Users\marcelo.soliveira38\OneDrive - SENAC - SP\Logica de Programação\Lumin\obj\Debug\net9.0\Lumin.genruntimeconfig.cache
 C:\Users\marcelo.soliveira38\OneDrive - SENAC - SP\Logica de Programação\Lumin\obj\Debug\net9.0\ref\Lumin.dll
+C:\Users\marcelo.soliveira38\OneDrive - SENAC - SP\Logica de Programação\Lumin\obj\Debug\net9.0\Lumin.sourcelink.json

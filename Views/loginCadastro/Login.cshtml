@@ -1,22 +1,22 @@
 @page
 
 <div>
-    <h1>Tela de Jogadores</h1>
+    <h1>Tela de Login</h1>
 
     @* Formulário de cadastro de equipes *@
-    <form method="POST" asp-action="CadastrarJogador" asp-controller="Jogador">
+    <form method="POST" asp-action="CadastrarLogin" asp-controller="Login">
         <div class="form-control">
-            <label for="nome">Nome do jogador</label>
+            <label for="nome">Nome do login</label>
             <input type="text" name="Nome">
         </div>
 
         <div class="form-control">
-            <label for="email">Email do jogador</label>
+            <label for="email">Email do login</label>
             <input type="Email" name="email">
         </div>
 
         <div class="form-control">
-            <label for="senha">Senha do jogador</label>
+            <label for="senha">Senha do login</label>
             <input type="Password" name="senha">
         </div>
 
@@ -43,19 +43,19 @@
         </thead>
 
         <tbody>
-            @foreach(Jogador jogador in ViewBag.ListaJogadores)
+            @foreach(Login login in ViewBag.ListaLogins)
             {
                 <tr>
-                    <td>@jogador.Id</td>
-                    <td>@jogador.Nome</td>
-                    <td>@jogador.Email</td>
-                    @* Forma de conseguir acessar os dados da equipe relacionada com o jogador *@
-                    <td>@jogador.IdEquipeNavigation?.Nome</td>
+                    <td>@login.Id</td>
+                    <td>@login.Nome</td>
+                    <td>@login.Email</td>
+                    @* Forma de conseguir acessar os dados da equipe relacionada com o Login *@
+                    <td>@login.IdEquipeNavigation?.Nome</td>
 
                     <td>
-                        @*<a class="btn btn-primary" href="/Jogador/Atualizar/@jogador.Id">Atualizar</a>*@
+                        @*<a class="btn btn-primary" href="/Login/Atualizar/@login.Id">Atualizar</a>*@
                         @* Passando para a função de excluir a referencia do id do jogador *@
-                        <a class="btn btn-danger" asp-action="ExcluirJogador" asp-controller="Jogador" asp-route-id="@jogador.Id">Excluir</a>
+                        <a class="btn btn-danger" asp-action="ExcluirLogin" asp-controller="Login" asp-route-id="@Login.Id">Excluir</a>
                     </td>
                 </tr>
             }
