@@ -1,64 +1,70 @@
 @page
 
 <div>
-    <h1>Tela de Jogadores</h1>
+    <h1>Tela de cadastro</h1>
 
     @* Formulário de cadastro de equipes *@
-    <form method="POST" asp-action="CadastrarJogador" asp-controller="Jogador">
+    <form method="POST" asp-action="CadastrarUsuario" asp-controller="Usuario">
         <div class="form-control">
-            <label for="nome">Nome do jogador</label>
+            <label for="nome">Nome</label>
             <input type="text" name="Nome">
         </div>
 
         <div class="form-control">
-            <label for="email">Email do jogador</label>
+            <label for="email">Nome de usuario</label>
+            <input type="Email" name="User">
+        </div>
+
+        <div class="form-control">
+            <label for="email">Email</label>
             <input type="Email" name="email">
         </div>
 
         <div class="form-control">
-            <label for="senha">Senha do jogador</label>
+            <label for="senha">Senha</label>
             <input type="Password" name="senha">
         </div>
 
-        <div class="form-control">
-            <select class="form-select" name="IdEquipe">
-                <option>Selecione uma equipe</option>
 
-                @foreach(Equipe equipe in ViewBag.ListaEquipes)
-                {
-                    <option value="@equipe.Id">@equipe.Nome</option>
-                }
-            </select>
-        </div>
+
+        @foreach (Usuario usuario in ViewBag.ListaUsuario)
+        {
+            <option value="@usuario.Id">@usuario.Nome</option>
+        }
+        </select>
+
+        </form>
+    </div>
 
         <button class="btn btn-primary" type="submit">Cadastrar</button>
-    </form>
+    
 
-    <table class="table table-striped">
-        <thead>
-            <th>Id</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Ações</th>
-        </thead>
+<table class="table table-striped">
+    <thead>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Email</th>
 
-        <tbody>
-            @foreach(Jogador jogador in ViewBag.ListaJogadores)
-            {
-                <tr>
-                    <td>@jogador.Id</td>
-                    <td>@jogador.Nome</td>
-                    <td>@jogador.Email</td>
-                    @* Forma de conseguir acessar os dados da equipe relacionada com o jogador *@
-                    <td>@jogador.IdEquipeNavigation?.Nome</td>
+    </thead>
 
-                    <td>
-                        @*<a class="btn btn-primary" href="/Jogador/Atualizar/@jogador.Id">Atualizar</a>*@
-                        @* Passando para a função de excluir a referencia do id do jogador *@
-                        <a class="btn btn-danger" asp-action="ExcluirJogador" asp-controller="Jogador" asp-route-id="@jogador.Id">Excluir</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <tbody>
+        @foreach (Usuario usuario in ViewBag.ListaUsuarios)
+        {
+            <tr>
+                <td>@usuario.Id</td>
+                <td>@usuario.Nome</td>
+                <td>@usuario.Email</td>
+
+
+
+                <td>
+                    @*<a class="btn btn-primary" href="/Jogador/Atualizar/@jogador.Id">Atualizar</a>*@
+                    @* Passando para a função de excluir a referencia do id do jogador *@
+                    <a class="btn btn-danger" asp-action="ExcluirUsuario" asp-controller="Usuario"
+                        asp-route-id="@usuario.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
 </div>
