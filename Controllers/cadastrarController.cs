@@ -1,25 +1,25 @@
+using Lumin.Contexts;
 using Lumin.Models;
-using Microsoft.AspNetCore.Components;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.AspNetCore.Mvc;
 
 [Route("[controller]")]
-{
-    public class cadastrarController : Controller
+
+    public class CadastrarController : Controller
     {
         // Criar uma referência (instância) sobre a comunicação do meu banco de dados
-        Lumin.Models _context = new Lumin();
+        LuminContext _context = new LuminContext();
 
         public IAsyncResult Index()
         {
-            // .include() - trago os dados das tabelas relacionadas
-            var listaUsuario = _context.Usuario.ToList();
+            // include();//- trago os dados das tabelas relacionadas;
+            var listaUsuario = _context.Usuarios.ToList();
 
             ViewBag.listaUsuario = listaUsuario;
 
 
           
 
-            return View();
+            return Index();
         }
 
         [Route("cadastrar")]
@@ -35,12 +35,12 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
         }
 
         // Na rota de excluir, vamos capturar o id que vem na url
-        [Route("ExcluirUsuario/{idUsuario}")]
+      /*  [Route("ExcluirUsuario/{idUsuario}")]
         
-        /*public IActionResult ExcluirEquipe(int idJogador)
+        public IActionResult ExcluirEquipe(int idJogador)
         {
             //Pegar o id de referência, e vou procurar a equipe no banco de dados
-           List<Jogador> listaJogadores = _context.Jogadors.Where(x => x.IdEquipe == idJogador).ToList();
+           List<> listaJogadores = _context.Jogadors.Where(x => x.IdEquipe == idJogador).ToList();
 
             if (listaJogadores.Count > 0)
             {
@@ -62,7 +62,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
             _context.SaveChanges();
 
             return RedirectToAction("Index");
-        }*/
+        }
 
         [Route("Atualizar/{idUsuario}")]
         public IActionResult Atualizar(int idUsuario)
@@ -81,7 +81,6 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
             _context.SaveChanges();
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Index");*/
         }
-    }
-}
+    

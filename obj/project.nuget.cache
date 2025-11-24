@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "hHKmj+LfdyM=",
   "success": true,
   "projectFilePath": "C:\\Users\\marcelo.soliveira38\\OneDrive - SENAC - SP\\Logica de Programação\\Lumin\\Lumin.csproj",
+=======
+  "dgSpecHash": "Q9nrehVTCAw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nycolas.sasantos\\Desktop\\lumin\\Lumin\\Lumin.csproj",
+>>>>>>> e1dc899c79c3af2e39f86e14428d8609e8dc6853
   "expectedPackageFiles": [
     "C:\\Users\\marcelo.soliveira38\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\marcelo.soliveira38\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
