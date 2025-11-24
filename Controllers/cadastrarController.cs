@@ -10,11 +10,7 @@ public interface ICadastrarController
 
 [Route("[controller]")]
 
-<<<<<<< HEAD
 public class CadastrarController : Controller, ICadastrarController
-=======
-public class CadastrarController : Controller
->>>>>>> 854552f55778b271b87f3ff03b323bdd1c6f63c4
 {
     // Criar uma referência (instância) sobre a comunicação do meu banco de dados
     LuminContext _context = new LuminContext();
@@ -32,18 +28,15 @@ public class CadastrarController : Controller
     [Route("cadastrar")]
     public IActionResult CadastrarUsuario(Usuario usuario)
     {
-<<<<<<< HEAD
+
         // Armazenar a equipe no banco de dados
         _context.Add(usuario);
-=======
->>>>>>> 854552f55778b271b87f3ff03b323bdd1c6f63c4
 
         // Registrar as alterações no banco de dados
         _context.SaveChanges();
 
         return RedirectToAction("Index");
     }
-<<<<<<< HEAD
 
     // Na rota de excluir, vamos capturar o id que vem na url
     /*  [Route("ExcluirUsuario/{idUsuario}")]
@@ -96,12 +89,3 @@ public class CadastrarController : Controller
       }
       */
 }
-=======
-}
-
-
-
-
-
-    
->>>>>>> 854552f55778b271b87f3ff03b323bdd1c6f63c4
