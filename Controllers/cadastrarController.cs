@@ -9,17 +9,14 @@ using Microsoft.AspNetCore.Mvc;
         // Criar uma referência (instância) sobre a comunicação do meu banco de dados
         LuminContext _context = new LuminContext();
 
-        public IAsyncResult Index()
+        public IActionResult Index()
         {
             // include();//- trago os dados das tabelas relacionadas;
             var listaUsuario = _context.Usuarios.ToList();
 
             ViewBag.listaUsuario = listaUsuario;
 
-
-          
-
-            return Index();
+            return View();
         }
 
         [Route("cadastrar")]
