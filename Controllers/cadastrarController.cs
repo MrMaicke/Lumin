@@ -9,19 +9,19 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
     public class CadastrarController : Controller
     {
         // Criar uma referência (instância) sobre a comunicação do meu banco de dados
-        Lumin.Models _context = new Lumin();
+        LuminContext _context = new Lumin();
 
         public IAsyncResult Index()
         {
-            // .include() - trago os dados das tabelas relacionadas
-            var listaUsuario = _context.Usuario.ToList();
+            include();//- trago os dados das tabelas relacionadas;
+            var listaUsuario = _context.Usuarios.ToList();
 
             ViewBag.listaUsuario = listaUsuario;
 
 
           
 
-            return View();
+            return Index();
         }
 
         [Route("cadastrar")]
