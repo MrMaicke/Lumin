@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "T:\\Publica\\transformece\\nycolasS\\Lumin\\Lumin.csproj": {}
+    "C:\\Users\\nycolas.sasantos\\Desktop\\lumin\\Lumin\\Lumin.csproj": {}
   },
   "projects": {
-    "T:\\Publica\\transformece\\nycolasS\\Lumin\\Lumin.csproj": {
+    "C:\\Users\\nycolas.sasantos\\Desktop\\lumin\\Lumin\\Lumin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "T:\\Publica\\transformece\\nycolasS\\Lumin\\Lumin.csproj",
+        "projectUniqueName": "C:\\Users\\nycolas.sasantos\\Desktop\\lumin\\Lumin\\Lumin.csproj",
         "projectName": "Lumin",
-        "projectPath": "T:\\Publica\\transformece\\nycolasS\\Lumin\\Lumin.csproj",
+        "projectPath": "C:\\Users\\nycolas.sasantos\\Desktop\\lumin\\Lumin\\Lumin.csproj",
         "packagesPath": "C:\\Users\\nycolas.sasantos\\.nuget\\packages\\",
-        "outputPath": "T:\\Publica\\transformece\\nycolasS\\Lumin\\obj\\",
+        "outputPath": "C:\\Users\\nycolas.sasantos\\Desktop\\lumin\\Lumin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

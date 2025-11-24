@@ -443,3 +443,15 @@ T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\staticwebassets.pack.jso
 T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\Lumin.csproj.Up2Date
 T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\Lumin.genruntimeconfig.cache
 T:\Publica\transformece\nycolasS\Lumin\obj\Debug\net9.0\ref\Lumin.dll
+C:\Users\nycolas.sasantos\Desktop\lumin\Lumin\obj\Debug\net9.0\Lumin.csproj.AssemblyReference.cache
+C:\Users\nycolas.sasantos\Desktop\lumin\Lumin\obj\Debug\net9.0\Lumin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nycolas.sasantos\Desktop\lumin\Lumin\obj\Debug\net9.0\Lumin.AssemblyInfoInputs.cache
+C:\Users\nycolas.sasantos\Desktop\lumin\Lumin\obj\Debug\net9.0\Lumin.AssemblyInfo.cs
+C:\Users\nycolas.sasantos\Desktop\lumin\Lumin\obj\Debug\net9.0\Lumin.csproj.CoreCompileInputs.cache
+C:\Users\nycolas.sasantos\Desktop\lumin\Lumin\obj\Debug\net9.0\Lumin.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\nycolas.sasantos\Desktop\lumin\Lumin\obj\Debug\net9.0\Lumin.RazorAssemblyInfo.cache
+C:\Users\nycolas.sasantos\Desktop\lumin\Lumin\obj\Debug\net9.0\Lumin.RazorAssemblyInfo.cs
+C:\Users\nycolas.sasantos\Desktop\lumin\Lumin\obj\Debug\net9.0\Lumin.sourcelink.json
+C:\Users\nycolas.sasantos\Desktop\lumin\Lumin\obj\Debug\net9.0\Lumin.dll
+C:\Users\nycolas.sasantos\Desktop\lumin\Lumin\obj\Debug\net9.0\refint\Lumin.dll
+C:\Users\nycolas.sasantos\Desktop\lumin\Lumin\obj\Debug\net9.0\Lumin.pdb
