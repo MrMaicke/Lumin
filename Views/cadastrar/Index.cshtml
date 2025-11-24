@@ -48,7 +48,7 @@
     </thead>
 
     <tbody>
-        @* @foreach (Usuario usuario in ViewBag.ListaUsuarios) 
+        @* @foreach (Usuario usuario in ViewBag.ListaUsuarios) *@
         {
             <tr>
                 <td>@usuario.Id</td>
@@ -58,10 +58,10 @@
 
 
                 <td>
-                    @*<a class="btn btn-primary" href="/Jogador/Atualizar/@jogador.Id">Atualizar</a>*@
-                    @* Passando para a função de excluir a referencia do id do jogador *@
-                   @* <a class="btn btn-danger" asp-action="ExcluirUsuario" asp-controller="Usuario"
-                        asp-route-id="@usuario.Id">Excluir</a>*@
+                    <a class="btn btn-primary" href="/Usuario/Atualizar/@usuario.Id">Atualizar</a>
+                    @*Passando para a função de excluir a referencia do id do usuario*@
+                    <a class="btn btn-danger" asp-action="ExcluirUsuario" asp-controller="Usuario"
+                    asp-route-id="@usuario.Id">Excluir</a>
                 </td>
             </tr>
         
