@@ -29,6 +29,7 @@ public partial class LuminContext : DbContext
     public virtual DbSet<TipoPrestador> TipoPrestadors { get; set; }
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
+    public object Usuario { get; internal set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -161,6 +162,11 @@ public partial class LuminContext : DbContext
         });
 
         OnModelCreatingPartial(modelBuilder);
+    }
+
+    internal void SaveChanges()
+    {
+        throw new NotImplementedException();
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
