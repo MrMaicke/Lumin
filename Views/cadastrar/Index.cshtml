@@ -1,4 +1,5 @@
 @page
+@using Microsoft.EntityFrameworkCore.Query.Internal
 
 <div>
     <h1>Tela de cadastro</h1>
@@ -51,9 +52,9 @@
         @foreach (Usuario usuario in ViewBag.ListaUsuarios) 
         {
             <tr>
-                <td>@usuario.Id</td>
-                <td>@usuario.Nome</td>
-                <td>@usuario.Email</td>
+                <td>@Usuario.Id</td>
+                <td>@Usuario.Nome</td>
+                <td>@Usuario.Email</td>
 
 
 
@@ -67,4 +68,4 @@
         
     </tbody>
 </table>
-</div>
+</div> 
