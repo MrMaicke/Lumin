@@ -68,16 +68,7 @@ body {
   top: 13px;
 }
 
-.gradient-custom-2 {
-  /* fallback for old browsers */
-  background: #a1c4fd;
 
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1));
-
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1))
-}
 
 .bg-indigo {
   background: linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1))
