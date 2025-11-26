@@ -80,7 +80,7 @@ body {
 }
 
 .bg-indigo {
-  background-color: #4835d4;
+  background: linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1))
 }
 
 @media (min-width: 992px) {
