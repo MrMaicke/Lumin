@@ -36,14 +36,14 @@ body {
   text-align: start;
 }
 
+.julios{
 
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  height: 320px;
 
-
-
-
-
-
-
+}
 
 .bg-indigo {
   background-color: #4835d4;
@@ -52,16 +52,17 @@ body {
 
 @media (min-width: 1025px) {
   .h-custom {
-    height: 100vh !important;
+    border-radius: 2%;
+    height: 62vh !important;
   }
 }
 
-.card-registration .select-input.form-control[readonly]:not([disabled]) {
+.card-registration .select-input.form-control[readonly]:not([disabled]) { 
   font-size: 1rem;
   line-height: 3.15;
   padding-left: .75em;
   padding-right: .75em;
-}
+} 
 
 .card-registration .select-arrow {
   top: 13px;
