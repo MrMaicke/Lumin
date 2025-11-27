@@ -1,0 +1,4 @@
+[*.cs]
+
+# CA1051: Não declarar campos de instância visíveis
+dotnet_diagnostic.CA1051.severity = none
