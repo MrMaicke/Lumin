@@ -1,32 +1,46 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+using Lumin.Contexts;
+using Lumin.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
-namespace Lumin.Controllers
+public interface iLoginController
 {
-    [Route("[controller]")]
-    public class NewController : Controller
+    IActionResult LoginUsuario(Usuario usuario);
+    IActionResult index();
+}
+
+
+[Route("[controller]")]
+
+
+
+#pragma warning disable CA1050 // Declarar tipos em namespaces
+public class LoginController : Controller
+#pragma warning restore CA1050 // Declarar tipos em namespaces
+
+{
+    // Criar uma referência (instância) sobre a comunicação do meu banco de dados
+    LuminContext _context = new LuminContext();
+
+    public IActionResult Index()
     {
-        private readonly ILogger<NewController> _logger;
+        // include();//- trago os dados das tabelas relacionadas;
+        var listaUsuario = _context.Usuarios.ToList();
 
-        public NewController(ILogger<NewController> logger)
-        {
-            _logger = logger;
-        }
+        ViewBag.listaUsuario = listaUsuario;
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        return View();
+    }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View("Error!");
-        }
+    [Route("Login")]
+    public IActionResult LoginUsuario(Usuario usuario)
+    {
+
+        // Armazenar a equipe no banco de dados
+        _context.Add(usuario);
+
+        // Registrar as alterações no banco de dados
+        _context.SaveChanges();
+
+        return RedirectToAction("Login");
     }
 }
