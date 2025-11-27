@@ -1,55 +1,71 @@
 @page
 
-<section class="h-100 h-custom gradient-custom-2">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12">
-        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
-          <div class="card-body p-0">
-            <div class="row g-0">
-              <div class="col-lg-6">
-                <div class="p-5">
-                  <h1 class="fw-normal mb-5 , julios" style="color: #a1c4fd;">Bem vindo a lumin!!</h1>
+<section class="gradient-custom-2 py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-12">
+                <div class="card card-registration card-registration-2" style="border-radius: 15px; overflow: hidden;">
+                    <div class="card-body p-0">
 
-                  <div class="row">
-                    <div class="col-md-6 mb-4 pb-2">
+                        <div class="row g-0">
 
-                    </div>
-                  </div>
-                </div>
-              </div>
+                            <!-- Lado esquerdo -->
+                            <div class="col-12">
+                                <div class="p-4 p-md-5">
 
-              <div class="col-lg-6 bg-indigo text-white">
-                <div class="p-5">
-                  <h3 class="fw-normal mb-5"></h3>
+                                    <h3 class="fw-normal mb-4" style="color: #a1c4fd;">
+                                        Cadastre-se
+                                    </h3>
 
-                  <div class="mb-4 pb-2">
-                    <div data-mdb-input-init class="form-outline form-white">
-                      <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
-                      <label class="form-label" for="form3Examplea2">E-mail</label>
-                    </div>
-                  </div>
+                                    <!-- Nome e usuário -->
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline" data-mdb-input-init>
+                                                <input type="text" id="nome" class="form-control" />
+                                                <label class="form-label" for="nome">Nome</label>
+                                            </div>
+                                        </div>
 
-                  <div class="mb-4 pb-2">
-                    <div data-mdb-input-init class="form-outline form-white">
-                      <input type="text" id="form3Examplea3" class="form-control form-control-lg" />
-                      <label class="form-label" for="form3Examplea3">Senha</label>
-                    </div>
-                  </div>
-                  <button type="button" class="btn btn-primary">Entrar</button> <button type="button"
-                    class="btn btn-light">Registrar</button>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline" data-mdb-input-init>
+                                                <input type="text" id="usuario" class="form-control" />
+                                                <label class="form-label" for="usuario">Nome de usuário</label>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                </div>
+                                    <!-- Email -->
+                                    <div class="form-outline mb-4" data-mdb-input-init>
+                                        <input type="email" id="email" class="form-control" />
+                                        <label class="form-label" for="email">E-mail</label>
+                                    </div>
 
-                <div class="col-md-7 mb-4 pb-2">
+                                    <!-- Senha -->
+                                    <div class="form-outline mb-4" data-mdb-input-init>
+                                        <input type="password" id="senha" class="form-control" />
+                                        <label class="form-label" for="senha">Senha</label>
+                                    </div>
 
-                </div>
-                
-              </div>
+                                    <!-- Termos -->
+                                    <div class="form-check d-flex justify-content-center mb-4">
+                                        <input class="form-check-input me-2" type="checkbox" id="termos" checked />
+                                        <label class="form-check-label" for="termos">
+                                            Termos e condições
+                                        </label>
+                                    </div>
+
+                                    <!-- Botão -->
+                                    <button type="submit" class="btn btn-primary w-100 mb-3">
+                                        Registrar
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </div> <!-- row -->
+                    </div> <!-- card-body -->
+                </div> <!-- card -->
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
