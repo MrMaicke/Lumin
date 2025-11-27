@@ -47,13 +47,7 @@ button.accept-policy {
   line-height: 60px;
 }
 
-.ter{
-  margin-right: 600px;
+.bg-gradient-lumin {
+  background: linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1));
+  min-height: 100vh; /* para ocupar a tela toda */
 }
-
-.form-check {
-  margin-right: 12000px;
-
-}
-
-
