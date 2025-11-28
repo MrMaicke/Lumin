@@ -1,108 +1,43 @@
-<<<<<<< HEAD
-@{}<div>
-  <form method="POST" asp-action="LoginUsuario" asp-controller="Login">
-<div class="row-L">
-                  <div class="col-md-6 mb-4">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example1" class="form-control" />
-                      <label class="form-label" for="form3Example1">Nome</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-4">
-                    <div data-mdb-input-init class="form-outline">
-                      <input type="text" id="form3Example2" class="form-control" />
-                      <label class="form-label" for="form3Example2">Nome de usuario</label>
-=======
-@page
-
-<section class="h-100 h-custom gradient-custom-2">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12">
-        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
-          <div class="card-body p-0">
-            <div class="row g-0">
-              <div class="col-lg-6">
-                <div class="p-5">
-                  <h3 class="display-3 fw-bold mb-4 fw-normal mb-5 , julios" style="color: #a1c4fd;">Bem vindo a lumin!!</h3>
-
-                  <div class="row">
-                    <div class="col-md-6 mb-4 pb-2">
-
->>>>>>> 98a7ec437e20145c086af7dca3b91ffbfe1a927a
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-6 bg-indigo text-white">
-                <div class="p-5">
-                  <h3 class="fw-normal mb-5"></h3>
-
-                  <div class="mb-4 pb-2">
-                    <div data-mdb-input-init class="form-outline form-white">
-                      <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
-                      <label class="form-label" for="form3Examplea2">E-mail</label>
-                    </div>
-                  </div>
-
-                  <div class="mb-4 pb-2">
-                    <div data-mdb-input-init class="form-outline form-white">
-                      <input type="text" id="form3Examplea3" class="form-control form-control-lg" />
-                      <label class="form-label" for="form3Examplea3">Senha</label>
-                    </div>
-                  </div>
-                  <button type="button" class="btn btn-primary">Entrar</button> 
-                  <button onclick="window.location.href='Cadastrar'" type="button" class="btn btn-light">Registrar</button>
-
-                </div>
-
-<<<<<<< HEAD
-                <!-- Submit button -->
-                <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
-                  Registrar
-                </button>
-  </form>
-
-          <table class="table table-striped">
-        <thead>
-            <th>Id</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Ações</th>
-        </thead>
-
-        <tbody>
-            @foreach(Usuario usuario in ViewBag.ListaUsuario)
-            {
-                <tr>
-                    <td>@usuario.Id</td>
-                    <td>@usuario.Nome</td>
-                    <td>@usuario.Email</td>
-
-
-                </tr>
-            }
-        </tbody>
-    </table>
-                <!-- Register buttons -->
-
-</div>
-
-            
-
-     
-=======
-                <div class="col-md-7 mb-4 pb-2">
->>>>>>> 98a7ec437e20145c086af7dca3b91ffbfe1a927a
-
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
+@{}
+< div >
+<form method="POST" asp-action="LoginUsuario" asp-controller="Login">
+    <div class="row-L">
+      <div class="col-md-6 mb-4">
+        <div data-mdb-input-init class="form-outline"> <input type="text" id="form3Example1" class="form-control" />
+          <label class="form-label" for="form3Example1">Nome</label> </div>
       </div>
-    </div>
-  </div>
-</section>
+      <div class="col-md-6 mb-4">
+        <div data-mdb-input-init class="form-outline"> <input type="text" id="form3Example2" class="form-control" />
+          <label class="form-label" for="form3Example2">Nome de usuario</label> </div>
+      </div>
+    </div> <!-- Email input -->
+    <div class="col-md-6 mb-4">
+      <div data-mdb-input-init class="form-outline"> <input type="mail" id="form3Example1" class="form-control" />
+        <label class="form-label" for="form3Example1">E-mail</label>
+        </div>
+    </div> <!-- Password input -->
+    <div class="col-md-6 mb-4">
+      <div data-mdb-input-init class="form-outline"> <input type="password" id="form3Example1" class="form-control" />
+        <label class="form-label" for="form3Example1">Senha</label> </div>
+    </div> <!-- Checkbox -->
+    <div class="form-check d-flex justify-content-center mb-4 "> <input class="form-check-input me-2" type="checkbox"
+        value="" id="form2Example33" checked /> <label class="form-check-label" for="form2Example33"> Termos e condições
+      </label> </div> <!-- Submit button --> <button type="submit" data-mdb-button-init data-mdb-ripple-init
+      class="btn btn-primary btn-block mb-4"> Registrar </button>
+  </form>
+  <table class="table table-striped">
+    <thead>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Ações</th>
+    </thead>
+    <tbody> @foreach(Usuario usuario in ViewBag.ListaUsuario) {
+    <tr>
+        <td>@usuario.Id</td>
+        <td>@usuario.Nome</td>
+        <td>@usuario.Email</td>
+      </tr>
+        }
+ </tbody>
+  </table> <!-- Register buttons ->}
