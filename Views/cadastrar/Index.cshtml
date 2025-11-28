@@ -1,43 +1,71 @@
-@{}
+@page
 
-<form method="POST" asp-action="LoginUsuario" asp-controller="Login">
-    <div class="row-L">
-      <div class="col-md-6 mb-4">
-        <div data-mdb-input-init class="form-outline"> <input type="text" id="form3Example1" class="form-control" />
-          <label class="form-label" for="form3Example1">Nome</label> </div>
-      </div>
-      <div class="col-md-6 mb-4">
-        <div data-mdb-input-init class="form-outline"> <input type="text" id="form3Example2" class="form-control" />
-          <label class="form-label" for="form3Example2">Nome de usuario</label> </div>
-      </div>
-    </div> <!-- Email input -->
-    <div class="col-md-6 mb-4">
-      <div data-mdb-input-init class="form-outline"> <input type="mail" id="form3Example1" class="form-control" />
-        <label class="form-label" for="form3Example1">E-mail</label>
+<section class="gradient-custom-2 py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-12">
+                <div class="card card-registration card-registration-2" style="border-radius: 15px; overflow: hidden;">
+                    <div class="card-body p-0">
+
+                        <div class="row g-0">
+
+                            <!-- Lado esquerdo -->
+                            <div class="col-12">
+                                <div class="p-4 p-md-5">
+
+                                    <h3 class="fw-normal mb-4" style="color: #a1c4fd;">
+                                        Cadastre-se
+                                    </h3>
+
+                                    <!-- Nome e usuário -->
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline" data-mdb-input-init>
+                                                <input type="text" id="nome" class="form-control" />
+                                                <label class="form-label" for="nome">Nome</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline" data-mdb-input-init>
+                                                <input type="text" id="usuario" class="form-control" />
+                                                <label class="form-label" for="usuario">Nome de usuário</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="form-outline mb-4" data-mdb-input-init>
+                                        <input type="email" id="email" class="form-control" />
+                                        <label class="form-label" for="email">E-mail</label>
+                                    </div>
+
+                                    <!-- Senha -->
+                                    <div class="form-outline mb-4" data-mdb-input-init>
+                                        <input type="password" id="senha" class="form-control" />
+                                        <label class="form-label" for="senha">Senha</label>
+                                    </div>
+
+                                    <!-- Termos -->
+                                    <div class="form-check d-flex justify-content-center mb-4">
+                                        <input class="form-check-input me-2" type="checkbox" id="termos" checked />
+                                        <label class="form-check-label" for="termos">
+                                            Termos e condições
+                                        </label>
+                                    </div>
+
+                                    <!-- Botão -->
+                                    <button type="submit" class="btn btn-primary w-100 mb-3">
+                                        Registrar
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </div> <!-- row -->
+                    </div> <!-- card-body -->
+                </div> <!-- card -->
+            </div>
         </div>
-    </div> <!-- Password input -->
-    <div class="col-md-6 mb-4">
-      <div data-mdb-input-init class="form-outline"> <input type="password" id="form3Example1" class="form-control" />
-        <label class="form-label" for="form3Example1">Senha</label> </div>
-    </div> <!-- Checkbox -->
-    <div class="form-check d-flex justify-content-center mb-4 "> <input class="form-check-input me-2" type="checkbox"
-        value="" id="form2Example33" checked /> <label class="form-check-label" for="form2Example33"> Termos e condições
-      </label> </div> <!-- Submit button --> <button type="submit" data-mdb-button-init data-mdb-ripple-init
-      class="btn btn-primary btn-block mb-4"> Registrar </button>
-  </form>
-  <table class="table table-striped">
-    <thead>
-      <th>Id</th>
-      <th>Nome</th>
-      <th>Email</th>
-      <th>Ações</th>
-    </thead>
-    <tbody> @foreach(Usuario usuario in ViewBag.ListaUsuario) {
-    <tr>
-        <td>@usuario.Id</td>
-        <td>@usuario.Nome</td>
-        <td>@usuario.Email</td>
-      </tr>
-        }
- </tbody>
-  </table> <!-- Register buttons ->}
+    </div>
+</section>
