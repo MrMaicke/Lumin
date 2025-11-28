@@ -23,6 +23,6 @@ public class LoginController : Controller
         _context.Add(usuario);
         _context.SaveChanges();
 
-     return RedirectToAction("Index", "Login");
+     return RedirectToAction("Index", "Cadastrar");
     }
 }
