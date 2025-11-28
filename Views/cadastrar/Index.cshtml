@@ -1,3 +1,4 @@
+@using Microsoft.EntityFrameworkCore.Metadata.Conventions
 @{}
 
 <form method="POST" asp-action="LoginUsuario" asp-controller="Login">
@@ -25,13 +26,8 @@
       </label> </div> <!-- Submit button --> <button type="submit" data-mdb-button-init data-mdb-ripple-init
       class="btn btn-primary btn-block mb-4"> Registrar </button>
   </form>
-  <table class="table table-striped">
-    <thead>
-      <th>Id</th>
-      <th>Nome</th>
-      <th>Email</th>
-      <th>Ações</th>
-    </thead>
+  
+
     <tbody> @foreach(Usuario usuario in ViewBag.ListaUsuario) {
     <tr>
         <td>@usuario.Id</td>
