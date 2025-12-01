@@ -15,12 +15,26 @@ public class LoginController : Controller
 
         return View(); // carrega Views/Login/Index.cshtml
     }
+
     [HttpPost]
-    [Route("Login")]
-    public IActionResult LoginUsuario(Usuario usuario)
+    public IActionResult Logar(string email, string senha)
     {
-        _context.Add(usuario);
-        _context.SaveChanges();
+        // Verificar se existe um usuario com o email
+        var usuarioProcurado = _context.Usuarios.FirstOrDefault(u => u.Email.ToLower() == email.ToLower());
+
+        if (usuarioProcurado != null)
+        {
+            if (usuarioProcurado.Senha == senha)
+            {
+                return RedirectToAction("Index", "Inicio");
+            }
+
+            TempData["ErrorMessage"] = "Email ou senha inválidos";
+        }
+        else
+        {
+            TempData["ErrorMessage"] = "Email não encontrado";   
+        }
 
         return RedirectToAction("Index");
     }

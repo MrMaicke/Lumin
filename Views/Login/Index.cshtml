@@ -19,34 +19,30 @@
                 </div>
               </div>
 
-              <div class="col-lg-6 bg-indigo text-white">
+              <form class="col-lg-6 bg-indigo text-white" asp-action="Logar" asp-controller="Login">
                 <div class="p-5">
                   <h3 class="fw-normal mb-5"></h3>
 
                   <div class="mb-4 pb-2">
                     <div data-mdb-input-init class="form-outline form-white">
-                      <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
+                      <input required type="text" name="email" class="form-control form-control-lg" />
                       <label class="form-label" for="form3Examplea2">E-mail</label>
                     </div>
                   </div>
 
                   <div class="mb-4 pb-2">
                     <div data-mdb-input-init class="form-outline form-white">
-                      <input type="text" id="form3Examplea3" class="form-control form-control-lg" />
+                      <input required type="password" name="senha" class="form-control form-control-lg" />
                       <label class="form-label" for="form3Examplea3">Senha</label>
                     </div>
                   </div>
                   
-                  <button type="button" class="btn btn-primary">Entrar</button> 
+                  <button type="submit" class="btn btn-primary">Entrar</button> 
                   <button onclick="window.location.href='Cadastrar'" type="button" class="btn btn-light">Registrar</button>
 
                 </div>
-
-                <div class="col-md-7 mb-4 pb-2">
-
-                </div>
-                
-              </div>
+                <p class="fw-semibol text-danger">@TempData["ErrorMessage"]</p>
+              </form>
             </div>
           </div>
         </div>
