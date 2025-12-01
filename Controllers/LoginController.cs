@@ -15,7 +15,6 @@ public class LoginController : Controller
 
         return View(); // carrega Views/Login/Index.cshtml
     }
-
     [HttpPost]
     [Route("Login")]
     public IActionResult LoginUsuario(Usuario usuario)
@@ -23,6 +22,6 @@ public class LoginController : Controller
         _context.Add(usuario);
         _context.SaveChanges();
 
-     return RedirectToAction("Index", "Cadastrar");
+        return RedirectToAction("Index");
     }
 }

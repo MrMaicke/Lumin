@@ -164,10 +164,7 @@ public partial class LuminContext : DbContext
         OnModelCreatingPartial(modelBuilder);
     }
 
-    internal void SaveChanges()
-    {
-         new NotImplementedException();
-    }
+
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
