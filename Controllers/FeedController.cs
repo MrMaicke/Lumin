@@ -23,6 +23,6 @@ public class FeedController : Controller
         _context.Add(usuario);
         _context.SaveChanges();
 
-        return RedirectToAction("Index");  // <--- Correto
+        return RedirectToAction("Index");
     }
 }
