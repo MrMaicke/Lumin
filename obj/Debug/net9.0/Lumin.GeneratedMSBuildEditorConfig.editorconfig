@@ -1,19 +1,11 @@
 is_global = true
 build_property.TargetFramework = net9.0
-build_property.TargetFramework = net9.0
-build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
-build_property.UsingMicrosoftNETSdkWeb = true
-build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
-build_property.InvariantGlobalization = 
-build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
-build_property.EnforceExtendedAnalyzerRules = 
-build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Lumin
 build_property.RootNamespace = Lumin
@@ -30,6 +22,10 @@ build_property.EnableCodeStyleSeverity =
 
 [C:/Users/nycolas.sasantos/Desktop/lumin/Lumin/Views/cadastrar/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcY2FkYXN0cmFyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nycolas.sasantos/Desktop/lumin/Lumin/Views/Feed/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZFxpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nycolas.sasantos/Desktop/lumin/Lumin/Views/Home/Index.cshtml]
