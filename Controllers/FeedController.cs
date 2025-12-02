@@ -16,13 +16,4 @@ public class FeedController : Controller
         return View(); // carrega Views/Login/Index.cshtml
     }
 
-    [HttpPost]
-    [Route("Feed")]
-    public IActionResult LoginUsuario(Usuario usuario)
-    {
-        _context.Add(usuario);
-        _context.SaveChanges();
-
-        return RedirectToAction("Index");  // <--- Correto
-    }
 }
