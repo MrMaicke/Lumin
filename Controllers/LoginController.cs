@@ -26,7 +26,7 @@ public class LoginController : Controller
         {
             if (usuarioProcurado.Senha == senha)
             {
-                return RedirectToAction("Index", "Inicio");
+                return RedirectToAction("Index", "Feed");
             }
 
             TempData["ErrorMessage"] = "Email ou senha inválidos";
