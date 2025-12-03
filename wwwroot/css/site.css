@@ -94,7 +94,6 @@ body {
 
 
 body{
-  margin-top:20px;
   background:#eee;
 }
 
@@ -336,4 +335,12 @@ body{
       display: inline-block;
       width: 100%
   }
+}
+.hero-1 {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&h=1080&fit=crop');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
