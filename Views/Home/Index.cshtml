@@ -1,28 +1,27 @@
-﻿<section class="h-100 h-custom bg-gradient-lumin">
-    <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-lg-8">
-                <div class="card shadow" style="border-radius: 20px;">
-                    <div class="card-body p-5 text-center">
+﻿@{
+    Layout = "~/Views/Shared/_LayoutStart.cshtml";
+}
 
-                        <h1 class="display-3 fw-bold mb-4" style="color: #a1c4fd;">
-                            LUMIN
-                        </h1>
+<section class="hero-1 d-flex align-items-center justify-content-center text-white">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <h1 class="display-3 fw-bold mb-4" style="color: #a1c4fd;">LUMIN</h1>
+                    <p class="lead mb-5">Uma forma de pensar que clareia as ideias, abraça as diferenças e transforma 
+                    cada pensamento em luz para quem precisa de um espaço mais leve.</p>
 
-                        <p class="lead mb-4">
-                            Uma forma de pensar que clareia as ideias, abraça as diferenças e transforma 
-                            cada pensamento em luz para quem precisa de um espaço mais leve.
-                        </p>
+                    <div class="d-flex gap-3 justify-content-center">
 
-                        <a href="Login" class="btn btn-outline-secondary btn-lg mt-2 px-5 ms-2">
-                            Entrar
-                        </a>
+                    <button class="btn btn-primary btn-lg">
+                    <i href="Login" class="fas fa-rocket me-2"></i>
+                    Entrar
+                    </button>
 
-                        <a href="Cadastrar" class="btn btn-primary btn-lg mt-2 px-5">
-                            Criar Conta
-                        </a>
+                    <button class="btn btn-outline-light btn-lg">
+                    <i href="Cadastrar" class="fas fa-rocket me-2"></i>
+                        Criar Conta
+                    </button>
 
-                    </div>
                 </div>
             </div>
         </div>
