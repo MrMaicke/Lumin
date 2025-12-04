@@ -5,6 +5,7 @@ USE Lumin
 CREATE TABLE Usuario(
 	id INT PRIMARY KEY IDENTITY,
 	nome VARCHAR(120),
+	sobrenome VARCHAR(120),
 	email VARCHAR(120) UNIQUE,
 	senha VARCHAR(15),
 	telefone VARCHAR(15)
