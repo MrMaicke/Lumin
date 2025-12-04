@@ -3,69 +3,50 @@
 }
 
 <section class="gradient-custom-2 d-flex justify-content-center align-items-center" style="height: 100vh;">
-    <div class="card card-registration card-registration-2 w-75 w-md-50" style="border-radius: 15px; overflow: hidden; max-width: 700px;">
+    <div class="card card-registration card-registration-2 w-75 w-md-50" 
+         style="border-radius: 15px; overflow: hidden; max-width: 700px;">
+        
         <div class="card-body p-0">
             <div class="row g-0">
                 <div class="col-12">
                     <div class="p-4 p-md-5">
+
                         <h3 class="fw-normal mb-4" style="color: #a1c4fd;">Cadastre-se</h3>
 
-                            <form id="formCadastro" method="post" action="/Cadastrar/Login">
+                        <form method="post" action="/Cadastrar/Login">
 
-                                <div class="row">
-                                    <div class="col-md-6 mb-4">
-                                        <label class="form-label" for="nome">Nome</label>
-                                        <input type="text" id="nome" name="Nome" class="form-control" />
-                                    </div>
-
-                                    <div class="col-md-6 mb-4">
-                                        <label class="form-label" for="sobrenome">Sobre Nome</label>
-                                        <input type="text" id="sobrenome" name="Telefone" class="form-control" />
-                                    </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <label class="form-label" for="nome">Nome</label>
+                                    <input type="text" id="nome" name="Nome" class="form-control" />
                                 </div>
 
-                                <div class="mb-4">
-                                    <label class="form-label" for="email">E-mail</label>
-                                    <input type="email" id="email" name="Email" class="form-control" />
+                                <div class="col-md-6 mb-4">
+                                    <label class="form-label" for="usuario">Nome de usuário</label>
+                                    <input type="text" id="usuario" name="Telefone" class="form-control" />
                                 </div>
+                            </div>
 
-                                <div class="mb-4">
-                                    <label class="form-label" for="senha">Senha</label>
-                                    <input type="password" id="senha" name="Senha" class="form-control" />
-                                </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="email">E-mail</label>
+                                <input type="email" id="email" name="Email" class="form-control" />
+                            </div>
 
-                                <div class="mb-4">
-                                    <label class="form-label" for="confsenha">Confirmar Senha</label>
-                                    <input type="password" id="confsenha" name="ConfSenha" class="form-control" />
-                                </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="senha">Senha</label>
+                                <input type="password" id="senha" name="Senha" class="form-control" />
+                            </div>
 
-                                <!-- Mensagem de erro -->
-                                <p id="erroSenha" class="text-danger fw-semibold" style="display:none;"></p>
+                            <button type="submit" class="btn btn-primary w-100 mb-3">
+                                Registrar
+                            </button>
 
-                                <a href="Cadastrar">
-                                <button  type="submit" class="btn btn-primary w-100 mb-3">Registrar</button>
-                                </a>
-                            </form>
+                        </form>
 
-                        <script>
-                            const form = document.getElementById('formCadastro');
-                            const senha = document.getElementById('senha');
-                            const confSenha = document.getElementById('confsenha');
-                            const erro = document.getElementById('erroSenha');
-
-                            form.addEventListener('submit', function(e) {
-                                if (senha.value !== confSenha.value) {
-                                    e.preventDefault(); // bloqueia o envio
-                                    erro.textContent = "As senhas não coincidem.";
-                                    erro.style.display = "block";
-                                } else {
-                                    erro.style.display = "none"; // esconde a mensagem se bater
-                                }
-                            });
-                        </script>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
