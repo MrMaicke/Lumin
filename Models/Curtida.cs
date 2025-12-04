@@ -11,9 +11,9 @@ public partial class Curtida
 
     public int? UsuarioId { get; set; }
 
-    public int? PostagemId { get; set; }
+    public int? TipoId { get; set; }
 
-    public virtual Postagem? Postagem { get; set; }
+    public virtual TipoPrestador? Tipo { get; set; }
 
     public virtual Usuario? Usuario { get; set; }
 }
