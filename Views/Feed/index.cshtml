@@ -1,8 +1,92 @@
 @{
     Layout = "~/Views/Shared/_LayoutStart.cshtml";
 }
+@model List<Lumin.Models.Postagem>
 
 <style>
+
+    body {
+        background: #f4f4f9;
+        font-family: Arial, sans-serif;
+    }
+
+    .feed-container {
+        max-width: 650px;
+        margin: 40px auto;
+    }
+
+    .post-card {
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: 0.2s ease-in-out;
+    }
+
+    .post-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .post-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .avatar {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        margin-right: 12px;
+    }
+
+    .user-info h5 {
+        margin: 0;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .user-info small {
+        color: #666;
+    }
+
+    .post-body p {
+        margin: 10px 0;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .post-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .btn-like {
+        background: #5865f2;
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.2s ease-in-out;
+    }
+
+    .btn-like:hover {
+        background: #4752c4;
+    }
+
+    .likes-count {
+        color: #e0245e;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+
     .card {
         border-radius: 10px;
     }
@@ -197,231 +281,125 @@
             </div>
         </div>
 
-        <div class="col-12 col-lg-8 col-xl-6 order-1 order-lg-2">
-            <div class="card">
-                <div class="card-body h-100">
+<div class="container mt-4">
+    <div class="row">
 
-                    <div class="media">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" width="56" height="56"
-                            class="rounded-circle mr-3" alt="Kathy Davis">
-                        <div class="media-body">
-                            <small class="float-right text-navy">5m ago</small>
-                            <p class="mb-2"><strong>Kathy Davis</strong></p>
-                            <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero,
-                                sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                                hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut
-                                libero venenatis faucibus.</p>
+        <!-- COLUNA ESQUERDA (Amigos + Perfil + About) -->
+        <div class="col-12 col-lg-4 col-xl-3">
 
-                            <div class="row no-gutters mt-1">
-                                <div class="col-6">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="img-fluid pr-1"
-                                        alt="Unsplash">
-                                </div>
-                                <div class="col-6">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar4.png" class="img-fluid pl-1"
-                                        alt="Unsplash">
-                                </div>
-                            </div>
+            <!-- AMIGOS -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h4 class="card-title mb-3">Amigos</h4>
 
-                            <small class="text-muted">Today 7:51 pm</small>
-                            <br>
-                            <a href="#" class="btn btn-sm btn-danger mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-heart feather-sm">
-                                    <path
-                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                    </path>
-                                </svg> Like</a>
-
-                            <div class="media mt-3">
-                                <a class="pr-2" href="#">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" width="36" height="36"
-                                        class="rounded-circle mr-2" alt="Marie Salter">
-                                </a>
-                                <div class="media-body">
-                                    <p class="text-muted">
-                                        <strong>Marie Salter</strong>: Nam pretium turpis et arcu. Duis arcu tortor,
-                                        suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices
-                                        mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.
-                                    </p>
-                                </div>
-                            </div>
-
+                    <div class="friend-item d-flex align-items-center mb-3">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar5.png" width="55" class="rounded-circle me-2" />
+                        <div>
+                            <h5 class="m-0">Carlos</h5>
+                            <button class="btn btn-primary btn-sm mt-1">Message</button>
                         </div>
                     </div>
 
-                    <hr>
-                    <div class="media">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" width="56" height="56"
-                            class="rounded-circle mr-3" alt="Andrew Jones">
-                        <div class="media-body">
-                            <small class="float-right text-navy">30m ago</small>
-                            <p class="mb-2"><strong>Andrew Jones</strong></p>
-                            <p>
-                                Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero,
-                                sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                                hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut
-                                libero venenatis faucibus. Nullam quis ante.
-                            </p>
-                            <small class="text-muted">Today 7:21 pm</small>
-                            <br>
-                            <a href="#" class="btn btn-sm btn-danger mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-heart feather-sm">
-                                    <path
-                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                    </path>
-                                </svg> Like</a>
+                    <div class="friend-item d-flex align-items-center mb-3">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar4.png" width="55" class="rounded-circle me-2" />
+                        <div>
+                            <h5 class="m-0">Rogerio</h5>
+                            <button class="btn btn-primary btn-sm mt-1">Message</button>
                         </div>
                     </div>
 
-                    <hr>
-                    <div class="media">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" width="56" height="56"
-                            class="rounded-circle mr-3" alt="John Smith">
-                        <div class="media-body">
-                            <small class="float-right text-navy">3h ago</small>
-                            <p class="mb-2"><strong>John Smith</strong></p>
-
-                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="img-fluid"
-                                alt="Unsplash">
-
-                            <small class="text-muted">Today 5:12 pm</small>
-                            <br>
-                            <a href="#" class="btn btn-sm btn-danger mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-heart feather-sm">
-                                    <path
-                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                    </path>
-                                </svg> Like</a>
-
-                            <div class="media mt-3">
-                                <a class="pr-2" href="#">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" width="36" height="36"
-                                        class="rounded-circle mr-2" alt="Marie Salter">
-                                </a>
-                                <div class="media-body">
-                                    <p class="text-muted">
-                                        <strong>Marie Salter</strong>: Nam pretium turpis et arcu. Duis arcu tortor,
-                                        suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices
-                                        mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="friend-item d-flex align-items-center">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" width="55" class="rounded-circle me-2" />
+                        <div>
+                            <h5 class="m-0">Cleiton</h5>
+                            <button class="btn btn-primary btn-sm mt-1">Message</button>
                         </div>
                     </div>
 
-                    <hr>
-                    <div class="media">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" width="56" height="56"
-                            class="rounded-circle mr-3" alt="Kathy Davis">
-                        <div class="media-body">
-                            <small class="float-right text-navy">4h ago</small>
-                            <p class="mb-2"><strong>Kathy Davis</strong></p>
-                            <p>
-                                Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero,
-                                sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                                hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut
-                                libero venenatis faucibus. Nullam quis ante.
-                            </p>
-                            <small class="text-muted">Today 4:21 pm</small>
-                            <br>
-                            <a href="#" class="btn btn-sm btn-danger mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-heart feather-sm">
-                                    <path
-                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                    </path>
-                                </svg> Like</a>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-12 col-lg-12 col-xl-3 order-3 order-lg-3">
-            <div class="card">
+            <!-- PERFIL -->
+            <div class="card mb-3">
+                <div class="card-body text-center">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="img-fluid rounded-circle mb-2" width="128" />
+                    <h4 class="mb-0">Kathy Davis</h4>
+                    <div class="text-muted mb-2">Front-end Developer</div>
+
+                    <button class="btn btn-primary btn-sm">Follow</button>
+                    <button class="btn btn-outline-primary btn-sm">Message</button>
+                </div>
+            </div>
+
+            <!-- ABOUT -->
+            <div class="card mb-3">
                 <div class="card-header">
-                    <div class="card-actions float-right">
-                        <div class="dropdown show">
-                            <a href="#" data-toggle="dropdown" data-display="static">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-more-horizontal align-middle">
-                                    <circle cx="12" cy="12" r="1"></circle>
-                                    <circle cx="19" cy="12" r="1"></circle>
-                                    <circle cx="5" cy="12" r="1"></circle>
-                                </svg>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
-                    </div>
-                    <h5 class="card-title mb-0">Activities</h5>
+                    <h5 class="card-title mb-0">About</h5>
                 </div>
-                <div class="card-body h-100">
-                    <form>
-                        <h4>Pedidos de amizade</h4>
+                <div class="card-body">
 
-                        <div class="friend-item">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar3.png">
-                            <div>
-                                <h5>Kathy Davis</h5>
-
-                                <div class="request-btns mt-2">
-                                    <button class="btn btn-primary">
-                                        <img src="adicionar.svg" width="10" alt="">
-                                    </button>
-
-                                    <button class="btn btn-outline-danger">
-                                        <i class="bi bi-person-dash-fill"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="card-body h-100">
-                    <form>
-                        <h4>Amigos</h4>
-
-                        <div class="friend-item">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar5.png">
-                            <div>
-                                <h5>Carlos</h5>
-                                <a class="btn btn-primary btn-sm mt-1">Message</a>
-                            </div>
-                        </div>
-
-                        <div class="friend-item">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar4.png">
-                            <div>
-                                <h5>Rogerio</h5>
-                                <a class="btn btn-primary btn-sm mt-1">Message</a>
-                            </div>
-                        </div>
-
-                        <div class="friend-item">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png">
-                            <div>
-                                <h5>Cleiton</h5>
-                                <a class="btn btn-primary btn-sm mt-1">Message</a>
-                            </div>
-                        </div>
-                    </form>
+                    <p><b>Lives in</b> San Francisco</p>
+                    <p><b>Works at</b> GitHub</p>
+                    <p><b>From</b> Boston</p>
 
                 </div>
             </div>
+
         </div>
+
+ 
+<div class="container mt-4">
+
+    <!-- Formulário para criar postagem -->
+    <form method="post" action="/Feed/Create" class="mb-4">
+        <div class="card p-3 shadow-sm">
+            <textarea name="Texto" class="form-control" rows="3" placeholder="Escreva algo..."></textarea>
+
+            <button type="submit" class="btn btn-primary mt-2">
+                Postar
+            </button>
+        </div>
+    </form>
+
+    <h3>Postagens recentes</h3>
+
+    <!-- Lista de posts -->
+    @foreach (var post in Model)
+    {
+        <div class="card mt-3 shadow-sm">
+            <div class="card-body">
+                
+                <small class="text-muted">@Postagem.Descricao.ToString("dd/MM/yyyy HH:mm")</small>
+            </div>
+        </div>
+    }
+</div>
+
+        <!-- COLUNA DO MEIO - FEED -->
+        <div class="col-12 col-lg-8 col-xl-6">
+
+            <h2 class="mb-4 text-center">Feed de Postagens</h2>
+
+            @foreach (var postagem in Model)
+            {
+                <div class="card mb-4 shadow-sm">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">@Postagem.Usuario?.Nome</h5>
+                        <p class="card-text">@Postagem.Descricao</p>
+
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-light me-2">❤️ Curtir</button>
+                            <span>@Postagem.Likes curtidas</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+
+        </div>
+
     </div>
 </div>
