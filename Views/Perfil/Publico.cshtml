@@ -1,8 +1,91 @@
 @model Lumin.Models.Perfil
 
-<h1>Perfil Público</h1>
+@{
+    Layout = "~/Views/Shared/_LayoutStart.cshtml";
+    ViewData["Title"] = "Perfil Público";
+}
 
-<img src="@Model.Avatar" width="120" />
+<div class="container py-4">
+    <div class="row">
 
-<p><strong>Nome:</strong> @Model.Nome</p>
-<p><strong>Bio:</strong> @Model.Bio</p>
+        <!-- COLUNA ESQUERDA – Avatar e Sobre -->
+        <div class="col-12 col-lg-4 col-xl-3">
+
+            <!-- Card do Avatar -->
+            <div class="card text-center p-3 mb-3">
+                <img src='@(Model.Avatar ?? "https://bootdey.com/img/Content/avatar/avatar3.png")'
+                     class="img-fluid rounded-circle mb-2" width="128" height="128">
+                <h4>@Model.Nome</h4>
+                <div class="text-muted mb-2">@Model.Profissao ?? "Profissão não informada"</div>
+            </div>
+
+            <!-- Card Sobre -->
+            <div class="card mb-3">
+                <div class="card-header"><h5 class="card-title mb-0">Sobre</h5></div>
+                <div class="card-body">
+                    <ul class="list-unstyled mb-0">
+                        <li>Lives in <strong>@Model.Cidade ?? "Cidade"</strong></li>
+                        <li>Works at <strong>@Model.Empresa ?? "Empresa"</strong></li>
+                        <li>From <strong>@Model.Estado ?? "Estado"</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card Amigos -->
+            <div class="card mb-3">
+                <div class="card-header"><h5 class="card-title mb-0">Amigos</h5></div>
+                <div class="card-body">
+                    @foreach(var amigo in Model.Amigos)
+                    {
+                        <div class="friend-item d-flex align-items-center mb-2">
+                            <img src='@(amigo.Avatar ?? "https://bootdey.com/img/Content/avatar/avatar3.png")'
+                                 class="rounded-circle mr-2" width="50" height="50" alt="@amigo.Nome">
+                            <div>
+                                <h6 class="mb-0">@amigo.Nome</h6>
+                                <a class="btn btn-primary btn-sm mt-1" href="#">Mensagem</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+
+        <!-- COLUNA DIREITA – Feed -->
+        <div class="col-12 col-lg-8 col-xl-9">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Atividades de @Model.Nome</h4>
+                    @foreach(var post in Model.Posts)
+                    {
+                        <div class="media mb-3">
+                            <img src='@(Model.Avatar ?? "https://bootdey.com/img/Content/avatar/avatar3.png")'
+                                 class="rounded-circle mr-3" width="56" height="56">
+                            <div class="media-body">
+                                <small class="float-right text-muted">@post.Data.ToString("g")</small>
+                                <p>@post.Conteudo</p>
+                                @if(!string.IsNullOrEmpty(post.Imagem))
+                                {
+                                    <img src="@post.Imagem" class="img-fluid mb-2 rounded">
+                                }
+                                <div class="mt-2">
+                                    <a href="#" class="btn btn-sm btn-danger">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                             stroke-linejoin="round" class="feather feather-heart">
+                                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06
+                                                     a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78
+                                                     1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                        </svg> Curtir
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

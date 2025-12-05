@@ -1,13 +1,52 @@
 @model Lumin.Models.Perfil
 
-<h1>Editar Perfil</h1>
+@{
+    Layout = "~/Views/Shared/_LayoutStart.cshtml";
+    ViewData["Title"] = "Editar Perfil";
+}
 
-<form method="post">
-    <label>Nome</label><br />
-    <input type="text" name="Nome" value="@Model.Nome" /><br /><br />
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
 
-    <label>Bio</label><br />
-    <textarea name="Bio">@Model.Bio</textarea><br /><br />
+            <div class="card p-4">
+                <h3 class="mb-4">Editar Perfil</h3>
+                <form asp-action="Editar" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Nome</label>
+                        <input type="text" class="form-control" asp-for="Nome">
+                    </div>
 
-    <button type="submit">Salvar</button>
-</form>
+                    <div class="mb-3">
+                        <label class="form-label">Profissão</label>
+                        <input type="text" class="form-control" asp-for="Profissao">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Cidade</label>
+                        <input type="text" class="form-control" asp-for="Cidade">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Estado</label>
+                        <input type="text" class="form-control" asp-for="Estado">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Empresa</label>
+                        <input type="text" class="form-control" asp-for="Empresa">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Avatar (URL)</label>
+                        <input type="text" class="form-control" asp-for="Avatar">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                    <a class="btn btn-secondary" href="/Perfil">Cancelar</a>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
