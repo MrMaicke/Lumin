@@ -44,6 +44,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/nycolas.sasantos/Desktop/lumin/Lumin/Views/Perfil/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXEVkaXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nycolas.sasantos/Desktop/lumin/Lumin/Views/Perfil/Publico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXFB1YmxpY28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nycolas.sasantos/Desktop/lumin/Lumin/Views/Perfil/Visualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXFZpc3VhbGl6YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/nycolas.sasantos/Desktop/lumin/Lumin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
