@@ -1,9 +1,8 @@
-@model SeuProjeto.Models.Perfil
+@model Lumin.Models.Perfil
 
-<h2>Editar Perfil</h2>
+<h1>Editar Perfil</h1>
 
 <form method="post">
-
     <label>Nome</label><br />
     <input type="text" name="Nome" value="@Model.Nome" /><br /><br />
 
@@ -11,5 +10,4 @@
     <textarea name="Bio">@Model.Bio</textarea><br /><br />
 
     <button type="submit">Salvar</button>
-
 </form>

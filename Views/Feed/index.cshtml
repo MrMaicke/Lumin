@@ -1,7 +1,7 @@
 @{
     Layout = "~/Views/Shared/_LayoutStart.cshtml";
 }
-
+@model List<Lumin.Models.Postagem>
 
 <style>
 
@@ -281,66 +281,125 @@
             </div>
         </div>
 
-        <div class="col-12 col-lg-8 col-xl-6 order-1 order-lg-2">
-            <div class="card">
-                <div class="feed-container">
+<div class="container mt-4">
+    <div class="row">
 
-    @foreach (var post in Model)
-    {
-        <div class="post-card">
-            <div class="post-header">
-                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="avatar">
-                <div class="user-info">
-                    <h5>@post.UsuarioNome</h5>
-                    <small>@DateTime.Now.ToString("dd/MM/yyyy")</small>
+        <!-- COLUNA ESQUERDA (Amigos + Perfil + About) -->
+        <div class="col-12 col-lg-4 col-xl-3">
+
+            <!-- AMIGOS -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h4 class="card-title mb-3">Amigos</h4>
+
+                    <div class="friend-item d-flex align-items-center mb-3">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar5.png" width="55" class="rounded-circle me-2" />
+                        <div>
+                            <h5 class="m-0">Carlos</h5>
+                            <button class="btn btn-primary btn-sm mt-1">Message</button>
+                        </div>
+                    </div>
+
+                    <div class="friend-item d-flex align-items-center mb-3">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar4.png" width="55" class="rounded-circle me-2" />
+                        <div>
+                            <h5 class="m-0">Rogerio</h5>
+                            <button class="btn btn-primary btn-sm mt-1">Message</button>
+                        </div>
+                    </div>
+
+                    <div class="friend-item d-flex align-items-center">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" width="55" class="rounded-circle me-2" />
+                        <div>
+                            <h5 class="m-0">Cleiton</h5>
+                            <button class="btn btn-primary btn-sm mt-1">Message</button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="post-body">
-                <p>@post.Descricao</p>
+            <!-- PERFIL -->
+            <div class="card mb-3">
+                <div class="card-body text-center">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="img-fluid rounded-circle mb-2" width="128" />
+                    <h4 class="mb-0">Kathy Davis</h4>
+                    <div class="text-muted mb-2">Front-end Developer</div>
+
+                    <button class="btn btn-primary btn-sm">Follow</button>
+                    <button class="btn btn-outline-primary btn-sm">Message</button>
+                </div>
             </div>
 
-            <div class="post-footer">
-                <form method="post" asp-action="Curtir">
-                    <input type="hidden" name="id" value="@post.Id" />
-                    <button type="submit" class="btn-like">👍 Curtir</button>
-                </form>
+            <!-- ABOUT -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">About</h5>
+                </div>
+                <div class="card-body">
 
-                <span class="likes-count">❤️ @post.Likes Likes</span>
+                    <p><b>Lives in</b> San Francisco</p>
+                    <p><b>Works at</b> GitHub</p>
+                    <p><b>From</b> Boston</p>
+
+                </div>
+            </div>
+
+        </div>
+
+ 
+<div class="container mt-4">
+
+    <!-- Formulário para criar postagem -->
+    <form method="post" action="/Feed/Create" class="mb-4">
+        <div class="card p-3 shadow-sm">
+            <textarea name="Texto" class="form-control" rows="3" placeholder="Escreva algo..."></textarea>
+
+            <button type="submit" class="btn btn-primary mt-2">
+                Postar
+            </button>
+        </div>
+    </form>
+
+    <h3>Postagens recentes</h3>
+
+    <!-- Lista de posts -->
+    @foreach (var post in Model)
+    {
+        <div class="card mt-3 shadow-sm">
+            <div class="card-body">
+                
+                <small class="text-muted">@Postagem.Descricao.ToString("dd/MM/yyyy HH:mm")</small>
             </div>
         </div>
     }
 </div>
-                    <form>
-                        <h4>Amigos</h4>
 
-                        <div class="friend-item">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar5.png">
-                            <div>
-                                <h5>Carlos</h5>
-                                <a class="btn btn-primary btn-sm mt-1">Message</a>
-                            </div>
+        <!-- COLUNA DO MEIO - FEED -->
+        <div class="col-12 col-lg-8 col-xl-6">
+
+            <h2 class="mb-4 text-center">Feed de Postagens</h2>
+
+            @foreach (var postagem in Model)
+            {
+                <div class="card mb-4 shadow-sm">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">@Postagem.Usuario?.Nome</h5>
+                        <p class="card-text">@Postagem.Descricao</p>
+
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-light me-2">❤️ Curtir</button>
+                            <span>@Postagem.Likes curtidas</span>
                         </div>
 
-                        <div class="friend-item">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar4.png">
-                            <div>
-                                <h5>Rogerio</h5>
-                                <a class="btn btn-primary btn-sm mt-1">Message</a>
-                            </div>
-                        </div>
-
-                        <div class="friend-item">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png">
-                            <div>
-                                <h5>Cleiton</h5>
-                                <a class="btn btn-primary btn-sm mt-1">Message</a>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
 
                 </div>
-            </div>
+            }
+
         </div>
+
     </div>
 </div>

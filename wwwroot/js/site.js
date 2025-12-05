@@ -8,7 +8,6 @@
     }
 }
 
-<<<<<<< HEAD
 class PerfilController {
 
     // Mostra o perfil do usuário logado
@@ -61,7 +60,3 @@ class PerfilService {
         );
     }
 }
-=======
-// Write your JavaScript code.
-
->>>>>>> b0de3d3591ce166e114738f9b74ac57cd2a3200f
