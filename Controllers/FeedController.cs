@@ -27,4 +27,19 @@ public class FeedController : Controller
         return RedirectToAction("Index");
     }
 
+    [HttpPost]
+    public IActionResult Curtir(int id)
+    {
+        var post = _context.Postagems.FirstOrDefault(p => p.Id == id);
+
+        if (post == null)
+            return NotFound();
+
+        post.Likes++;
+        _context.SaveChanges();
+
+        return Json(new { likes = post.Likes });
+    }
+
+
 }
