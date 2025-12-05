@@ -282,73 +282,7 @@
         </div>
 
 <div class="container mt-4">
-    <div class="row">
-
-        <!-- COLUNA ESQUERDA (Amigos + Perfil + About) -->
-        <div class="col-12 col-lg-4 col-xl-3">
-
-            <!-- AMIGOS -->
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h4 class="card-title mb-3">Amigos</h4>
-
-                    <div class="friend-item d-flex align-items-center mb-3">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar5.png" width="55" class="rounded-circle me-2" />
-                        <div>
-                            <h5 class="m-0">Carlos</h5>
-                            <button class="btn btn-primary btn-sm mt-1">Message</button>
-                        </div>
-                    </div>
-
-                    <div class="friend-item d-flex align-items-center mb-3">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar4.png" width="55" class="rounded-circle me-2" />
-                        <div>
-                            <h5 class="m-0">Rogerio</h5>
-                            <button class="btn btn-primary btn-sm mt-1">Message</button>
-                        </div>
-                    </div>
-
-                    <div class="friend-item d-flex align-items-center">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" width="55" class="rounded-circle me-2" />
-                        <div>
-                            <h5 class="m-0">Cleiton</h5>
-                            <button class="btn btn-primary btn-sm mt-1">Message</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- PERFIL -->
-            <div class="card mb-3">
-                <div class="card-body text-center">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="img-fluid rounded-circle mb-2" width="128" />
-                    <h4 class="mb-0">Kathy Davis</h4>
-                    <div class="text-muted mb-2">Front-end Developer</div>
-
-                    <button class="btn btn-primary btn-sm">Follow</button>
-                    <button class="btn btn-outline-primary btn-sm">Message</button>
-                </div>
-            </div>
-
-            <!-- ABOUT -->
-            <div class="card mb-3">
-                <div class="card-header">
-                    <h5 class="card-title mb-0">About</h5>
-                </div>
-                <div class="card-body">
-
-                    <p><b>Lives in</b> San Francisco</p>
-                    <p><b>Works at</b> GitHub</p>
-                    <p><b>From</b> Boston</p>
-
-                </div>
-            </div>
-
-        </div>
-
- 
-<div class="container mt-4">
+    
 
     <!-- Formulário para criar postagem -->
     <form method="post" action="/Feed/Create" class="mb-4">
@@ -369,16 +303,16 @@
         <div class="card mt-3 shadow-sm">
             <div class="card-body">
                 
-                <small class="text-muted">@Postagem.Descricao.ToString("dd/MM/yyyy HH:mm")</small>
+                 <small class="text-muted">@post.DataPostagem.("dd/MM/yyyy HH:mm")</small> 
             </div>
         </div>
     }
 </div>
 
         <!-- COLUNA DO MEIO - FEED -->
-        <div class="col-12 col-lg-8 col-xl-6">
+         <div class="col-12 col-lg-8 col-xl-6"> 
 
-            <h2 class="mb-4 text-center">Feed de Postagens</h2>
+          
 
             @foreach (var postagem in Model)
             {
@@ -386,12 +320,12 @@
 
                     <div class="card-body">
 
-                        <h5 class="card-title">@Postagem.Usuario?.Nome</h5>
-                        <p class="card-text">@Postagem.Descricao</p>
+                        <h5 class="card-title">@postagem.UsuarioId</h5>
+                        <p class="card-text">@postagem.Descricao</p>
 
                         <div class="d-flex align-items-center">
                             <button class="btn btn-light me-2">❤️ Curtir</button>
-                            <span>@Postagem.Likes curtidas</span>
+                            <span>@postagem.Likes curtidas</span>
                         </div>
 
                     </div>
@@ -399,7 +333,7 @@
                 </div>
             }
 
-        </div>
+        </div> 
 
     </div>
 </div>

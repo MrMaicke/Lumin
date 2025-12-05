@@ -13,5 +13,7 @@ public partial class Postagem
 
     public int? Likes { get; set; }
 
+    public int? DataPostagem { get; set; }
+
     public virtual Usuario? Usuario { get; set; }
 }
