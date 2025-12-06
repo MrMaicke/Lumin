@@ -4,117 +4,9 @@
 @model List<Lumin.Models.Postagem>
 
 <style>
-
     body {
         background: #f4f4f9;
         font-family: Arial, sans-serif;
-    }
-
-    .feed-container {
-        max-width: 650px;
-        margin: 40px auto;
-    }
-
-    .post-card {
-        background: #fff;
-        padding: 20px;
-        margin-bottom: 25px;
-        border-radius: 15px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        transition: 0.2s ease-in-out;
-    }
-
-    .post-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    }
-
-    .post-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-    }
-
-    .avatar {
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        margin-right: 12px;
-    }
-
-    .user-info h5 {
-        margin: 0;
-        font-size: 17px;
-        font-weight: bold;
-    }
-
-    .user-info small {
-        color: #666;
-    }
-
-    .post-body p {
-        margin: 10px 0;
-        font-size: 16px;
-        color: #333;
-    }
-
-    .post-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 15px;
-    }
-
-    .btn-like {
-        background: #5865f2;
-        color: #fff;
-        border: none;
-        padding: 8px 15px;
-        border-radius: 20px;
-        cursor: pointer;
-        font-size: 14px;
-        transition: 0.2s ease-in-out;
-    }
-
-    .btn-like:hover {
-        background: #4752c4;
-    }
-
-    .likes-count {
-        color: #e0245e;
-        font-weight: bold;
-        font-size: 15px;
-    }
-
-
-    .card {
-        border-radius: 10px;
-    }
-
-    .card-body img {
-        object-fit: cover;
-    }
-
-    .btn {
-        min-width: 90px;
-        /* deixa os botões iguais */
-    }
-
-    .btn-sm {
-        padding: 4px 10px;
-        /* padroniza o tamanho dos botões pequenos */
-    }
-
-    .media img {
-        object-fit: cover;
-    }
-
-    h5,
-    h4,
-    p,
-    small {
-        margin-bottom: .4rem !important;
-        /* remove espaçamentos excessivos */
     }
 
     .friend-item {
@@ -130,161 +22,16 @@
         margin-right: 10px;
     }
 
-    .friend-item h5 {
-        margin: 0 !important;
+    .card {
+        border-radius: 10px;
     }
 
-    .friend-actions {
-        margin-top: 8px;
-    }
-
-    .request-btns button {
-        width: 40px;
-        height: 40px;
-        padding: 6px;
-    }
-
-    <img class="img-fluid rounded mb-2" style="max-height: 300px; object-fit: cover;">
 </style>
-
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-lg-4 col-xl-3 order-2 order-lg-1">
-            <div class="card mb-3">
-                <div class="card-body text-center">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="Kathy Davis"
-                        class="img-fluid rounded-circle mb-2" width="128" height="128">
-                    <h4 class="card-title mb-0">Kathy Davis</h4>
-                    <div class="text-muted mb-2">Front-end Developer</div>
-
-                    <div>
-                        <a class="btn btn-primary btn-sm" href="#">Follow</a>
-                        <a class="btn btn-primary btn-sm" href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-message-square">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                            </svg> Message</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3">
-                <div class="card-header">
-                    <div class="card-actions float-right">
-                        <div class="dropdown show">
-                            <a href="" data-toggle="dropdown" data-display="static">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-more-horizontal align-middle">
-                                    <circle cx="12" cy="12" r="1"></circle>
-                                    <circle cx="19" cy="12" r="1"></circle>
-                                    <circle cx="5" cy="12" r="1"></circle>
-                                </svg>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="">Action</a>
-                                <a class="dropdown-item" href="">Another action</a>
-                                <a class="dropdown-item" href="">Something else here</a>
-                            </div>
-                        </div>
-                    </div>
-                    <h5 class="card-title mb-0">About</h5>
-                </div>
-                <div class="card-body">
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-home feather-sm mr-1">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                            </svg> Lives in <a href="">San Francisco, SA</a>
-                        </li>
-                        <li class="mb-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-briefcase feather-sm mr-1">
-                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                            </svg> Works at <a href="">GitHub</a>
-                        </li>
-                        <li class="mb-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-map-pin feather-sm mr-1">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg> From <a href="">Boston</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card mb-3">
-                <div class="card-header">
-                    <div class="card-actions float-right">
-                        <div class="dropdown show">
-                            <a href="" data-toggle="dropdown" data-display="static">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-more-horizontal align-middle">
-                                    <circle cx="12" cy="12" r="1"></circle>
-                                    <circle cx="19" cy="12" r="1"></circle>
-                                    <circle cx="5" cy="12" r="1"></circle>
-                                </svg>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="">Action</a>
-                                <a class="dropdown-item" href="">Another action</a>
-                                <a class="dropdown-item" href="">Something else here</a>
-                            </div>
-                        </div>
-                    </div>
-                    <h5 class="card-title mb-0">Following</h5>
-                </div>
-                <div class="card-body">
-
-                    <div class="media">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" width="56" height="56"
-                            class="rounded-circle mr-2" alt="Andrew Jones">
-                        <div class="media-body">
-                            <p class="my-1"><strong>Andrew Jones</strong></p>
-                            <a class="btn btn-sm btn-outline-primary" href="">Unfollow</a>
-                        </div>
-                    </div>
-
-                    <hr class="my-2">
-
-                    <div class="media">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" width="56" height="56"
-                            class="rounded-circle mr-2" alt="John Smit">
-                        <div class="media-body">
-                            <p class="my-1"><strong>John Smit</strong></p>
-                            <a class="btn btn-sm btn-outline-primary" href="">Unfollow</a>
-                        </div>
-                    </div>
-
-                    <hr class="my-2">
-
-                    <div class="media">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" width="56" height="56"
-                            class="rounded-circle mr-2" alt="Marie Salter">
-                        <div class="media-body">
-                            <p class="my-1"><strong>Marie Salter</strong></p>
-                            <a class="btn btn-sm btn-outline-primary" href="">Unfollow</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
 
 <div class="container mt-4">
     <div class="row">
 
-        <!-- COLUNA ESQUERDA (Amigos + Perfil + About) -->
+        <!-- COLUNA ESQUERDA -->
         <div class="col-12 col-lg-4 col-xl-3">
 
             <!-- AMIGOS -->
@@ -292,24 +39,24 @@
                 <div class="card-body">
                     <h4 class="card-title mb-3">Amigos</h4>
 
-                    <div class="friend-item d-flex align-items-center mb-3">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar5.png" width="55" class="rounded-circle me-2" />
+                    <div class="friend-item">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar5.png" />
                         <div>
                             <h5 class="m-0">Carlos</h5>
                             <button class="btn btn-primary btn-sm mt-1">Message</button>
                         </div>
                     </div>
 
-                    <div class="friend-item d-flex align-items-center mb-3">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar4.png" width="55" class="rounded-circle me-2" />
+                    <div class="friend-item">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar4.png" />
                         <div>
                             <h5 class="m-0">Rogerio</h5>
                             <button class="btn btn-primary btn-sm mt-1">Message</button>
                         </div>
                     </div>
 
-                    <div class="friend-item d-flex align-items-center">
-                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" width="55" class="rounded-circle me-2" />
+                    <div class="friend-item">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" />
                         <div>
                             <h5 class="m-0">Cleiton</h5>
                             <button class="btn btn-primary btn-sm mt-1">Message</button>
@@ -322,7 +69,9 @@
             <!-- PERFIL -->
             <div class="card mb-3">
                 <div class="card-body text-center">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="img-fluid rounded-circle mb-2" width="128" />
+                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" 
+                         class="img-fluid rounded-circle mb-2" width="128" />
+
                     <h4 class="mb-0">Kathy Davis</h4>
                     <div class="text-muted mb-2">Front-end Developer</div>
 
@@ -337,65 +86,40 @@
                     <h5 class="card-title mb-0">About</h5>
                 </div>
                 <div class="card-body">
-
                     <p><b>Lives in</b> San Francisco</p>
                     <p><b>Works at</b> GitHub</p>
                     <p><b>From</b> Boston</p>
-
                 </div>
             </div>
 
         </div>
 
- 
-<div class="container mt-4">
-
-    <!-- Formulário para criar postagem -->
-    <form method="post" action="/Feed/Create" class="mb-4">
-        <div class="card p-3 shadow-sm">
-            <textarea name="Texto" class="form-control" rows="3" placeholder="Escreva algo..."></textarea>
-
-            <button type="submit" class="btn btn-primary mt-2">
-                Postar
-            </button>
-        </div>
-    </form>
-
-    <h3>Postagens recentes</h3>
-
-    <!-- Lista de posts -->
-    @foreach (var post in Model)
-    {
-        <div class="card mt-3 shadow-sm">
-            <div class="card-body">
-                
-                <small class="text-muted">@Postagem.Descricao.ToString("dd/MM/yyyy HH:mm")</small>
-            </div>
-        </div>
-    }
-</div>
-
         <!-- COLUNA DO MEIO - FEED -->
         <div class="col-12 col-lg-8 col-xl-6">
 
-            <h2 class="mb-4 text-center">Feed de Postagens</h2>
+            <!-- Criar postagem -->
+            <div class="card p-3 mb-4 shadow-sm">
+                <form method="post" action="/Feed/Create">
+                    <textarea name="Descricao" class="form-control" rows="3" placeholder="Escreva algo..."></textarea>
+
+                    <button type="submit" class="btn btn-primary mt-2">Postar</button>
+                </form>
+            </div>
+
+            <h3 class="mb-3 text-center">Postagens recentes</h3>
 
             @foreach (var postagem in Model)
             {
                 <div class="card mb-4 shadow-sm">
-
                     <div class="card-body">
 
-                        <h5 class="card-title">@Postagem.Usuario?.Nome</h5>
-                        <p class="card-text">@Postagem.Descricao</p>
+                        <h5 class="card-title">@postagem.Usuario?.Nome</h5>
 
-                        <div class="d-flex align-items-center">
-                            <button class="btn btn-light me-2">❤️ Curtir</button>
-                            <span>@Postagem.Likes curtidas</span>
-                        </div>
+                        <p class="card-text">@postagem.Descricao</p>
+
+                        <button class="btn btn-light">❤️ Curtir</button>
 
                     </div>
-
                 </div>
             }
 

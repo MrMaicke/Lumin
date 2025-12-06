@@ -15,6 +15,8 @@ public partial class Usuario
 
     public string? Telefone { get; set; }
 
+    public virtual ICollection<Comentario> Comentarios { get; set; } = new List<Comentario>();
+
     public virtual ICollection<Curtida> Curtida { get; set; } = new List<Curtida>();
 
     public virtual ICollection<Postagem> Postagems { get; set; } = new List<Postagem>();

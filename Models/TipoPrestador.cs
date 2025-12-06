@@ -9,7 +9,5 @@ public partial class TipoPrestador
 
     public string? Tipo { get; set; }
 
-    public virtual ICollection<Curtida> Curtida { get; set; } = new List<Curtida>();
-
     public virtual ICollection<PrestadorDeServico> PrestadorDeServicos { get; set; } = new List<PrestadorDeServico>();
 }
