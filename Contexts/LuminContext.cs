@@ -93,7 +93,7 @@ public partial class LuminContext : DbContext
             entity.ToTable("Postagem");
 
             entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.DataPostagem).HasColumnType("datetime");
+            // entity.Property(e => e.DataPostagem).HasColumnType("datetime");
             entity.Property(e => e.Descricao)
                 .HasMaxLength(300)
                 .IsUnicode(false)

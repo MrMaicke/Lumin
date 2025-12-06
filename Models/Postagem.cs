@@ -19,5 +19,7 @@ public partial class Postagem
 
     public virtual ICollection<Midium> Midia { get; set; } = new List<Midium>();
 
+    // public int? DataPostagem { get; set; }
+
     public virtual Usuario? Usuario { get; set; }
 }
