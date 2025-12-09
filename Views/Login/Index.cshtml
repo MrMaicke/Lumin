@@ -1,43 +1,55 @@
 @{
     Layout = "~/Views/Shared/_LayoutStart.cshtml";
 }
-
-<section class="gradient-custom-2 d-flex justify-content-center align-items-center" style="height:100vh;">
-    <div class="card card-registration card-registration-2 w-75" style="border-radius: 15px; overflow:hidden;">
+ 
+<section class="gradient-custom-2 d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="card card-registration card-registration-2 w-75"
+         style="border-radius: 15px; overflow: hidden; max-width: 850px;">
+ 
         <div class="row g-0">
-            
-            <!-- LADO ESQUERDO -->
-            <div class="col-lg-6 d-flex align-items-center">
-                <div class="p-5">
-                    <h3 class="display-3 fw-bold mb-5 julios" style="color: #a1c4fd;">Bem-vindo à Lumin!!</h3>
-                </div>
+ 
+            <!-- TÍTULO CENTRALIZADO ACIMA DO FORM -->
+            <div class="col-12 text-center py-5" style="background: transparent;">
+                <h3 class="fw-bold mb-0" style="color: #a1c4fd; font-size: 2.8rem;">
+                    Bem-vindo à Lumin!
+                </h3>
             </div>
-
-            <!-- FORMULÁRIO -->
-            <form class="col-lg-6 bg-indigo text-white d-flex align-items-center" 
+ 
+            <!-- FORMULÁRIO COM O MESMO ESTILO DEGRADE -->
+            <form class="col-12 bg-indigo text-white d-flex justify-content-center"
                   asp-action="Logar" asp-controller="Login">
-                <div class="p-5 w-100">
+ 
+                <div class="p-5" style="width: 100%; max-width: 450px;">
+ 
                     <div class="mb-4 pb-2">
                         <div class="form-outline form-white">
-                            <input required type="text" name="email" class="form-control form-control-lg" />
                             <label class="form-label">E-mail</label>
+                            <input required type="text" name="email" class="form-control form-control-lg" />
                         </div>
                     </div>
-
+ 
                     <div class="mb-4 pb-2">
                         <div class="form-outline form-white">
-                            <input required type="password" name="senha" class="form-control form-control-lg" />
                             <label class="form-label">Senha</label>
+                            <input required type="password" name="senha" class="form-control form-control-lg" />
                         </div>
                     </div>
-
-                    <button type="submit" class="btn btn-primary">Entrar</button>
-                    <button onclick="window.location.href='Cadastrar'" type="button" class="btn btn-light">Registrar</button>
-
-                    <p class="fw-semibold text-danger mt-3">@TempData["ErrorMessage"]</p>
+ 
+                    <button type="submit" class="btn btn-primary w-100 mb-3">Entrar</button>
+ 
+                    <button onclick="window.location.href='Cadastrar'"
+                            type="button"
+                            class="btn btn-light w-100">
+                        Registrar
+                    </button>
+ 
+                    <p class="fw-semibold text-danger mt-3 text-center">
+                        @TempData["ErrorMessage"]
+                    </p>
                 </div>
+ 
             </form>
-
+ 
         </div>
     </div>
 </section>

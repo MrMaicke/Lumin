@@ -5,9 +5,11 @@ using System.Collections.Generic;
 
 namespace Lumin.Controllers
 {
+    [Route("[controller]")]
     public class PerfilController : Controller
     {
-        public IActionResult Visualizar()
+        [HttpGet("/perfil")]  
+        public IActionResult Editar()
         {
             // Exemplo de perfil
             var perfil = new Perfil
