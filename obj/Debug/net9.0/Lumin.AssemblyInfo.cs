@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lumin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5feb8fb8680c338cd3a8b62fb43935eb61b71776")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f72be1868129d6ffd83ff409f0477a297325db80")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lumin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lumin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
