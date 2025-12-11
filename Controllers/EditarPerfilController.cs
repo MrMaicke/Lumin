@@ -1,20 +1,20 @@
+using Lumin.Contexts;
 using Lumin.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Linq;
 
 namespace Lumin.Controllers
 {
-    public class EditarPerfilController : Controller
+    public class EditarUsuarioController : Controller
     {
-        private readonly AppContext _context;
+        private readonly LuminContext _context;
 
-        public EditarPerfilController(AppContext context)
+        public EditarUsuarioController(LuminContext context)
         {
             _context = context;
         }
 
-        // GET /Perfil/Editar/1
+        // GET: /Perfil/Editar/1
         public IActionResult Editar(int id)
         {
             var usuario = _context.Usuarios.FirstOrDefault(x => x.Id == id);
@@ -25,23 +25,25 @@ namespace Lumin.Controllers
             return View(usuario);
         }
 
-        // POST /Perfil/Editar
+        // POST: /Perfil/Editar
         [HttpPost]
-        public IActionResult Editar(Usuario usuarioEditado)
+        public IActionResult Editar(EditarUsuario usuarioEditado)
         {
             if (!ModelState.IsValid)
                 return View(usuarioEditado);
 
-            var usuario = _context.Usuarios.FirstOrDefault(x => x.Id == usuarioEditado.Id);
+            var find = _context.Usuarios.FirstOrDefault(x => x.Id == usuarioEditado.Id);
 
-            if (usuario == null)
+            if (find == null)
                 return NotFound();
 
-            // Atualiza campos
-            usuario.Nome = usuarioEditado.Nome;
-            usuario.Cidade = usuarioEditado.Cidade;
-            usuario.Estado = usuarioEditado.Estado;
-            usuario.FotoPerfil = usuarioEditado.Avatar;
+            EditarUsuario usuario = new EditarUsuario()
+            {
+                Nome = usuarioEditado.Nome,
+                Cidade = usuarioEditado.Cidade,
+                Estado = usuarioEditado.Estado,
+                FotoPerfil = usuarioEditado.Avatar
+            };
 
             _context.Update(usuario);
             _context.SaveChanges();
