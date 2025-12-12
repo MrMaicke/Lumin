@@ -339,3 +339,11 @@ body{
     background-position: center;
     background-size: cover;
 }
+
+.img-postagem {
+  max-width: 600px; 
+  max-height: 600px; 
+  object-fit: cover;  
+  border-radius: 26px; 
+  margin: 1px;        
+}

@@ -25,6 +25,8 @@ public class LoginController : Controller
         {
             if (usuarioProcurado.Senha == senha)
             {
+                HttpContext.Session.SetString("Usuario", usuarioProcurado.Id.ToString());
+
                 return RedirectToAction("Index", "Feed");
             }
 
