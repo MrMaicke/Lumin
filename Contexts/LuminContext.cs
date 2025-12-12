@@ -38,7 +38,7 @@ public partial class LuminContext : DbContext
     {
         modelBuilder.Entity<Comentario>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Comentar__3213E83F7244D827");
+            entity.HasKey(e => e.Id).HasName("PK__Comentar__3213E83F5E93F135");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.PostagemId).HasColumnName("Postagem_id");
@@ -46,16 +46,16 @@ public partial class LuminContext : DbContext
 
             entity.HasOne(d => d.Postagem).WithMany(p => p.Comentarios)
                 .HasForeignKey(d => d.PostagemId)
-                .HasConstraintName("FK__Comentari__Posta__73BA3083");
+                .HasConstraintName("FK__Comentari__Posta__440B1D61");
 
             entity.HasOne(d => d.Usuario).WithMany(p => p.Comentarios)
                 .HasForeignKey(d => d.UsuarioId)
-                .HasConstraintName("FK__Comentari__Usuar__72C60C4A");
+                .HasConstraintName("FK__Comentari__Usuar__44FF419A");
         });
 
         modelBuilder.Entity<Curtida>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Curtidas__3213E83FAD6B959F");
+            entity.HasKey(e => e.Id).HasName("PK__Curtidas__3213E83F64F05139");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Horario).HasColumnType("datetime");
@@ -64,16 +64,16 @@ public partial class LuminContext : DbContext
 
             entity.HasOne(d => d.Postagem).WithMany(p => p.Curtida)
                 .HasForeignKey(d => d.PostagemId)
-                .HasConstraintName("FK__Curtidas__Postag__07C12930");
+                .HasConstraintName("FK__Curtidas__Postag__45F365D3");
 
             entity.HasOne(d => d.Usuario).WithMany(p => p.Curtida)
                 .HasForeignKey(d => d.UsuarioId)
-                .HasConstraintName("FK__Curtidas__Usuari__06CD04F7");
+                .HasConstraintName("FK__Curtidas__Usuari__46E78A0C");
         });
 
         modelBuilder.Entity<Midium>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Midia__3213E83F8D292EF3");
+            entity.HasKey(e => e.Id).HasName("PK__Midia__3213E83F3EB7DF7D");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Imagem)
@@ -83,17 +83,17 @@ public partial class LuminContext : DbContext
 
             entity.HasOne(d => d.Postagem).WithMany(p => p.Midia)
                 .HasForeignKey(d => d.PostagemId)
-                .HasConstraintName("FK__Midia__Postagem___0D7A0286");
+                .HasConstraintName("FK__Midia__Postagem___47DBAE45");
         });
 
         modelBuilder.Entity<Postagem>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Postagem__3213E83FCFFD96C7");
+            entity.HasKey(e => e.Id).HasName("PK__Postagem__3213E83F928D1B87");
 
             entity.ToTable("Postagem");
 
             entity.Property(e => e.Id).HasColumnName("id");
-            // entity.Property(e => e.DataPostagem).HasColumnType("datetime");
+            entity.Property(e => e.DataPostagem).HasColumnType("datetime");
             entity.Property(e => e.Descricao)
                 .HasMaxLength(300)
                 .IsUnicode(false)
@@ -102,12 +102,12 @@ public partial class LuminContext : DbContext
 
             entity.HasOne(d => d.Usuario).WithMany(p => p.Postagems)
                 .HasForeignKey(d => d.UsuarioId)
-                .HasConstraintName("FK__Postagem__Usuari__59063A47");
+                .HasConstraintName("FK__Postagem__Usuari__48CFD27E");
         });
 
         modelBuilder.Entity<PrestadorDeServico>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__prestado__3213E83F3DD802B1");
+            entity.HasKey(e => e.Id).HasName("PK__prestado__3213E83F1F6DABA2");
 
             entity.ToTable("prestadorDeServicos");
 
@@ -119,12 +119,12 @@ public partial class LuminContext : DbContext
 
             entity.HasOne(d => d.Tipo).WithMany(p => p.PrestadorDeServicos)
                 .HasForeignKey(d => d.TipoId)
-                .HasConstraintName("FK__prestador__Tipo___5DCAEF64");
+                .HasConstraintName("FK__prestador__Tipo___49C3F6B7");
         });
 
         modelBuilder.Entity<TipoPrestador>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__tipoPres__3213E83FF024ADF6");
+            entity.HasKey(e => e.Id).HasName("PK__tipoPres__3213E83F991BB9B2");
 
             entity.ToTable("tipoPrestador");
 
@@ -136,17 +136,19 @@ public partial class LuminContext : DbContext
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Usuario__3213E83F83AC3AE8");
+            entity.HasKey(e => e.Id).HasName("PK__Usuario__3213E83FF671D675");
 
             entity.ToTable("Usuario");
 
-            entity.HasIndex(e => e.Email, "UQ__Usuario__AB6E61648C33AA1F").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Usuario__AB6E61648D36A00A").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Cidade).HasMaxLength(255);
             entity.Property(e => e.Email)
                 .HasMaxLength(120)
                 .IsUnicode(false)
                 .HasColumnName("email");
+            entity.Property(e => e.Estado).HasMaxLength(255);
             entity.Property(e => e.Nome)
                 .HasMaxLength(120)
                 .IsUnicode(false)
@@ -155,10 +157,6 @@ public partial class LuminContext : DbContext
                 .HasMaxLength(15)
                 .IsUnicode(false)
                 .HasColumnName("senha");
-            entity.Property(e => e.Telefone)
-                .HasMaxLength(15)
-                .IsUnicode(false)
-                .HasColumnName("telefone");
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -16,20 +16,29 @@
             </div>
  
             <!-- FORMULÁRIO -->
-            <form method="post" asp-action="/Cadastrar/Login"
+            <form method="Post" asp-action="Cadastrar" asp-controller="Cadastrar"
                   class="col-12 bg-indigo text-white d-flex justify-content-center">
  
                 <div class="p-5" style="width: 100%; max-width: 450px;">
  
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <label class="form-label" for="nome">Nome</label>
-                            <input type="text" id="nome" name="Nome" class="form-control form-control-lg" />
-                        </div>
+
+                    <div class="mb-4">
+                        <label class="form-label" for="email">Nome</label>
+                        <input type="text" id="nome" name="Nome" class="form-control form-control-lg" />
+                    </div>
  
+
+                        <div class="row">
                         <div class="col-md-6 mb-4">
-                            <label class="form-label" for="usuario">Sobre Nome</label>
-                            <input type="text" id="usuario" name="Telefone" class="form-control form-control-lg" />
+                            <label class="form-label" for="nome">Estado</label>
+                            <input type="text" id="Estado" name="Estado" class="form-control form-control-lg" />
+                        </div>
+
+
+                        
+                        <div class="col-md-6 mb-4">
+                            <label class="form-label" for="nome">Cidade</label>
+                            <input type="text" id="Cidade" name="Cidade" class="form-control form-control-lg" />
                         </div>
                     </div>
  
@@ -48,8 +57,9 @@
                         <input type="password" id="confsenha" name="ConfSenha" class="form-control form-control-lg" />
                     </div>
  
+                   
                     <button type="submit" class="btn btn-primary w-100 mb-3">Registrar</button>
- 
+
                     <button onclick="window.location.href='login'" type="button"
                             class="btn btn-light w-100">
                         Já tenho uma conta

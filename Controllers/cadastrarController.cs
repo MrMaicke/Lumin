@@ -25,23 +25,24 @@ public class CadastrarController : Controller
 
         return RedirectToAction("Index");  // <--- Correto
     }
+
     [HttpPost]
-public IActionResult ValidarSenha(string senha, string confiSenha)
-{
-    if (string.IsNullOrEmpty(senha) || string.IsNullOrEmpty(confiSenha))
+    [Route("Cadastrar")]
+    public IActionResult Cadastrar(Usuario usuario, string ConfSenha)
     {
-        TempData["ErrorMessage"] = "Preencha todos os campos.";
-        return RedirectToAction("Index"); // volta para a página do formulário
-    }
+        if (usuario.Senha != ConfSenha)
+        {
+            TempData["ErrorMessage"] = "As senhas não coincidem.";
+            return RedirectToAction("Index"); // bloqueia o acesso
+        }
 
-    if (senha != confiSenha)
-    {
-        TempData["ErrorMessage"] = "As senhas não coincidem.";
-        return RedirectToAction("Index"); // bloqueia o acesso
-    }
+        // Cadastrando um usuairo
+        _context.Add(usuario);
 
-    // Senhas batem → pode continuar
-    TempData["SuccessMessage"] = "Senha confirmada!";
-    return RedirectToAction("Feed", "Index"); // ou qualquer próxima página
-}
+        _context.SaveChanges();
+
+        // Senhas batem → pode continuar
+        TempData["SuccessMessage"] = "Senha confirmada!";
+        return RedirectToAction("Index", "Feed"); // ou qualquer próxima página
+    }
 }

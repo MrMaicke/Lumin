@@ -1,5 +1,4 @@
 using Lumin.Contexts;
-using Lumin.Models;
 using Microsoft.AspNetCore.Mvc;
 
 [Route("[controller]")]

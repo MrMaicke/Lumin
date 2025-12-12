@@ -1,49 +1,66 @@
+using Lumin.Contexts;
 using Lumin.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Linq;
 
 namespace Lumin.Controllers
 {
-    public class EditarPerfilController : Controller
+    public class EditarUsuarioController : Controller
     {
-        private readonly AppContext _context;
+        private readonly LuminContext _context;
 
-        public EditarPerfilController(AppContext context)
+        public EditarUsuarioController(LuminContext context)
         {
             _context = context;
         }
 
-        // GET /Perfil/Editar/1
+        // GET: /EditarUsuario/Editar/1
+        [HttpGet]
         public IActionResult Editar(int id)
         {
+            // USE _context.Usuarios (não Perfils) — ajuste conforme seu DbContext
             var usuario = _context.Usuarios.FirstOrDefault(x => x.Id == id);
 
             if (usuario == null)
                 return NotFound();
 
-            return View(usuario);
+            var model = new EditarUsuario
+            {
+                Id = usuario.Id,
+                Nome = usuario.Nome,
+                // Se Usuario NÃO tem Cidade/Estado/FotoPerfil, estes ficarão null até você adicionar as colunas
+                Cidade = usuario.GetType().GetProperty("Cidade") != null ? (string?)usuario.GetType().GetProperty("Cidade")?.GetValue(usuario) : null,
+                Estado = usuario.GetType().GetProperty("Estado") != null ? (string?)usuario.GetType().GetProperty("Estado")?.GetValue(usuario) : null,
+                Avatar = usuario.GetType().GetProperty("FotoPerfil") != null ? (string?)usuario.GetType().GetProperty("FotoPerfil")?.GetValue(usuario) : null
+            };
+
+            return View(model);
         }
 
-        // POST /Perfil/Editar
+        // POST: /EditarUsuario/Editar
         [HttpPost]
-        public IActionResult Editar(Usuario usuarioEditado)
+        [ValidateAntiForgeryToken]
+        public IActionResult Editar(EditarUsuario usuario)
         {
             if (!ModelState.IsValid)
-                return View(usuarioEditado);
+                return View(usuario);
 
-            var usuario = _context.Usuarios.FirstOrDefault(x => x.Id == usuarioEditado.Id);
-
-            if (usuario == null)
+            var entidade = _context.Usuarios.FirstOrDefault(x => x.Id == usuario.Id);
+            if (entidade == null)
                 return NotFound();
 
-            // Atualiza campos
-            usuario.Nome = usuarioEditado.Nome;
-            usuario.Cidade = usuarioEditado.Cidade;
-            usuario.Estado = usuarioEditado.Estado;
-            usuario.FotoPerfil = usuarioEditado.Avatar;
+            entidade.Nome = usuario.Nome;
 
-            _context.Update(usuario);
+            // Atualiza apenas se a propriedade existir no model Usuario (evita exception se coluna faltar)
+            var propCidade = entidade.GetType().GetProperty("Cidade");
+            if (propCidade != null) propCidade.SetValue(entidade, usuario.Cidade);
+
+            var propEstado = entidade.GetType().GetProperty("Estado");
+            if (propEstado != null) propEstado.SetValue(entidade, usuario.Estado);
+
+            var propFoto = entidade.GetType().GetProperty("FotoPerfil");
+            if (propFoto != null) propFoto.SetValue(entidade, usuario.Avatar);
+
             _context.SaveChanges();
 
             TempData["Sucesso"] = "Perfil atualizado com sucesso!";

@@ -13,7 +13,9 @@ public partial class Usuario
 
     public string? Senha { get; set; }
 
-    public string? Telefone { get; set; }
+    public string? Cidade { get; set; }
+
+    public string? Estado { get; set; }
 
     public virtual ICollection<Comentario> Comentarios { get; set; } = new List<Comentario>();
 
