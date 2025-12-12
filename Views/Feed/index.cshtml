@@ -113,10 +113,14 @@
 
             <!-- Criar postagem -->
             <div class="card p-3 mb-4 shadow-sm">
-                <form method="post" action="/Feed/Create">
+                <form method="post" action="/Feed/Create" enctype="multipart/form-data">
                     <textarea name="Descricao" class="form-control" rows="3" placeholder="Escreva algo..."></textarea>
 
                     <button type="submit" class="btn btn-primary mt-2">Postar</button>
+
+                    <div class="input-group">
+                    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                    </div>
                 </form>
             </div>
 
