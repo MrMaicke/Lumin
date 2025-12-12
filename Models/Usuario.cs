@@ -15,6 +15,12 @@ public partial class Usuario
 
     public string? Telefone { get; set; }
 
+    public string? Cidade { get; set; }
+
+    public string? Estado { get; set; }
+
+    public string? FotoPerfil { get; set; }
+
     public virtual ICollection<Comentario> Comentarios { get; set; } = new List<Comentario>();
 
     public virtual ICollection<Curtida> Curtida { get; set; } = new List<Curtida>();
