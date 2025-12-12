@@ -1,7 +1,6 @@
 @{
     Layout = "~/Views/Shared/_LayoutStart.cshtml";
 }
-@model List<Lumin.Models.Postagem>
 
 
 <style>
@@ -43,7 +42,7 @@
                     <h4 class="mb-0">Kathy Davis</h4>
                     <div class="text-muted mb-2">Front-end Developer</div>
 
-                    <a href="Perfil" <button class="btn btn-primary btn-sm">Editar perfil</button></a>
+                    @* <a href="Perfil" <button class="btn btn-primary btn-sm">Editar perfil</button></a> *@
 
                 </div>
             </div>
@@ -113,9 +112,9 @@
                     <div class="input-group">
                         <input type="file" name="Imagens" multiple accept=".png, .jpg, .jpeg" class="form-control"
                             id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                        <button type="submit" class="btn btn-primary mt-2">Postar</button>
                     </div>
 
-                    <button type="submit" class="btn btn-primary mt-2">Postar</button>
                 </form>
             </div>
 
@@ -137,7 +136,7 @@
                         }
 
                     </div>
-                        <button class="btn btn-light">❤️Curtir</button>
+                    <button class="btn  btn-light">❤️Curtir
                 </div>
             }
 

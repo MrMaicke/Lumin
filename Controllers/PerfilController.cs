@@ -8,7 +8,7 @@ namespace Lumin.Controllers
     [Route("[controller]")]
     public class PerfilController : Controller
     {
-        [HttpGet("/perfil")]  
+        [HttpGet("/Perfil")]  
         public IActionResult Editar()
         {
             // Exemplo de perfil
